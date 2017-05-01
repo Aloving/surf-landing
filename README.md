@@ -1,2 +1,2 @@
-# startGulpKit
-Starting kit with gulp + browserify + sass + es6(babel)
+# surf landing
+surf landing for traning
