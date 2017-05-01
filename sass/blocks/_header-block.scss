@@ -1,0 +1,10 @@
+@import 'header-block/header-module';
+
+.logo h1{
+	color: $black;
+	margin: 0px;
+	font:{
+		size: 2.125rem;
+		family: 'Montserrat';
+	}
+}

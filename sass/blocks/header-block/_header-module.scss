@@ -1,0 +1,26 @@
+.header{
+
+	&__wrapper{
+		@extend %wrapper;
+	}
+
+	&__logo,
+	&__nav,
+	&__socials{
+		display: inline-block;
+	}
+
+}
+
+.navigation{
+	&__link{
+		text-decoration: none;
+		padding: 6px 10px;
+		color: $black;
+		transition: .1s;
+		&:hover{
+			background: $main-blue;
+			color: #fff;
+		}
+	}
+}
