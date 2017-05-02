@@ -1,0 +1,31 @@
+$buy-module-width: 1030px;
+$buy-module-height: 600px;
+$svg-spinner-size: 115px;
+
+.buy-module{
+	width: $buy-module-width;
+	height: $buy-module-height;
+	box-shadow: 0px 0px 30px 8px rgba(0,0,0,.34);
+	margin:{
+		top: 151px;
+		right: auto;
+		left: auto;
+	}
+	position: relative;
+	z-index: 2;
+	background: #fff;
+
+	&__spinner{
+		height: 100%;
+		width: 100%;
+		position: relative;
+		svg{
+			position: absolute;
+			top: ($buy-module-height / 2) - ($svg-spinner-size / 2);
+			left: ($buy-module-width / 2) - ($svg-spinner-size / 2);
+			vertical-align: middle;
+			width: $svg-spinner-size;
+			height: $svg-spinner-size;
+		}
+	}
+}

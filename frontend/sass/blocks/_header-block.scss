@@ -1,4 +1,5 @@
 @import 'header-block/header-module';
+@import 'header-block/buy-module';
 
 .logo h1{
 	color: $black;
@@ -6,5 +7,6 @@
 	font:{
 		size: 2.125rem;
 		family: 'Montserrat';
+		weight: 700;
 	}
 }

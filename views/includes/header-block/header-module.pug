@@ -9,12 +9,18 @@
 			a.navigation__link(href="#") Technology
 			a.navigation__link(href="#") Team
 			a.navigation__link(href="#") Dealers
-		.header__socials
-			a(href="#") facebook
-			a(href="#") insta
-			a(href="#") email
+		.header__socials.socials
+			a.socials__element(href="#")
+				svg.socials__svg
+					use(xlink:href="#facebook-logo-button")
+			a.socials__element(href="#") 
+				svg.socials__svg
+					use(xlink:href="#instagram-logo")
+			a.socials__element(href="#")
+				svg.socials__svg
+					use(xlink:href="#email")
 	.header__tagline
-		.first-tagline
+		.header__first-tagline
 			|Ride every wave as if it's your last
-		.second-tagline
+		.header__second-tagline
 			|We love the motion of the ocean

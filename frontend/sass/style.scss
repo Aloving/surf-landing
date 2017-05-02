@@ -1,0 +1,12 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers';
+@import 'blocks';
+
+.svg-sprites{
+	display: none;
+}
+
+body{
+	margin-bottom: 300px;
+}
