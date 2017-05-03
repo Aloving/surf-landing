@@ -4,15 +4,15 @@ import Rx from 'rxjs';
 import { mediator } from './surfCore';
 import { buyModuleFacade } from './buyModule/buyModuleFacade';
 
-mediator.subscribe('gettingIds', buyModuleFacade._logging);
-buyModuleFacade
-	._getBoardIds()
-	.then(response => response.json())
-	.then(data => mediator.publish('gettingIds', data))
-	.catch(err => {
-		mediator.publish('gettingIds', 
-			{
-				type: error,
-				data: err
-			});
-	});
+
+// initialize buy module
+try{
+	mediator.subscribe('gettingIdsUrl', buyModuleFacade._getBoardIds(mediator.publish, 'gettingIds'));
+	mediator.subscribe('gettingIds', buyModuleFacade._logging)
+
+	mediator.publish('gettingIdsUrl', buyModuleFacade._gettingUrlForGettingIds());
+	// mediator.publish('gettingIds', buyModuleFacade._getBoardIds())
+}catch(err){
+	buyModuleFacade._addErrorMessageInToModule();
+	throw err;
+};

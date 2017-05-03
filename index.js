@@ -6,11 +6,14 @@ let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')
 }
 
+let boardIdsUrl = '/getboardids';
+
 let data = (function(data){
 	let information = {};
 
 	information.counts = data.boards.length;
 	information.pugModules = pugModules;
+	information.boardIdsUrl = boardIdsUrl;
 
 	return information;
 })(boardsData);
@@ -30,7 +33,7 @@ app.get('/', (req,res) => {
 	res.render('index', data);
 });
 
-app.post('/getboardids', (req,res) => {
+app.post(boardIdsUrl, (req,res) => {
 	res.send(boardsIds);
 });
 

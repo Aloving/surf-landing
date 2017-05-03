@@ -1,0 +1,18 @@
+$section-heading-color: #fafafa;
+
+@mixin section-heading($font-size,$specific: 0){
+	text-transform: uppercase;
+	color: $section-heading-color;
+	font:{
+		family: "Montserrat";
+		weight: 600;
+	}
+	margin: 0;
+	letter-spacing: 11px;
+	font-size: $font-size;
+	@if($specific){
+		@each $key, $val in $specific {
+			#{$key}: #{$val}
+		}		
+	}
+}

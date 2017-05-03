@@ -79,4 +79,16 @@ $svg-spinner-size: 115px;
 		}
 	}
 
+	&__error-message{
+		width: 100%;
+		height: 100%;
+		display: table;
+		text-align: center;
+		p{
+			display: table-cell;
+			vertical-align: middle;
+			@include section-heading(6rem, (color: darken($section-heading-color,5%)));
+		}
+	}
+
 }

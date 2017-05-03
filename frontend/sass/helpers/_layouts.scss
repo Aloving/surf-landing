@@ -5,20 +5,17 @@
 	width: 100%;
 }
 .section-heading{
-	text-transform: uppercase;
-	color: #fafafa;
-	font:{
-		family: "Montserrat";
-		weight: 600;
-	}
-	margin: 0;
-	letter-spacing: 11px;
 	&__boards{
-		transform: rotate(270deg);
-		transform-origin: right top;
-		font-size: 8.138rem;
-		position: absolute;
-		top: -17px;
-		right: 121px;
+		@include section-heading(8.138rem, (
+				transform: rotate(270deg),
+				transform-origin: right top,
+				position: absolute,
+				top: -17px,
+				right: 121px,
+				transition: opacity 0.3s
+			))
+		&_errored{
+			opacity: 0;
+		}
 	}
 }
