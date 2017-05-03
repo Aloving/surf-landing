@@ -32,8 +32,12 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
   },
-  "browser": {},
-  "browserify-shim": {},
+  "browser": {
+    "rxjs": "rx"
+  },
+  "browserify-shim": {
+    "rxjs": "Rx"
+  },
   "browserify": {
     "transform": [
       "browserify-shim",
@@ -49,6 +53,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "rxjs": "^5.3.1",
     "zepto": "^1.2.0"
   },
   "repository": {

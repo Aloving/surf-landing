@@ -5,6 +5,7 @@ $svg-spinner-size: 115px;
 .buy-module{
 	width: $buy-module-width;
 	height: $buy-module-height;
+	overflow: hidden;
 	box-shadow: 0px 0px 30px 8px rgba(0,0,0,.34);
 	margin:{
 		top: 151px;
@@ -19,7 +20,7 @@ $svg-spinner-size: 115px;
 		height: 100%;
 		width: 100%;
 		position: relative;
-		svg{
+		img{
 			position: absolute;
 			top: ($buy-module-height / 2) - ($svg-spinner-size / 2);
 			left: ($buy-module-width / 2) - ($svg-spinner-size / 2);
@@ -28,4 +29,54 @@ $svg-spinner-size: 115px;
 			height: $svg-spinner-size;
 		}
 	}
+
+	&__digits{
+		background: $black;
+		position: absolute;
+		top: 88px;
+		width: 72px;
+		text-align: center;
+		right: 0px;
+		padding: 10px 7px;
+	}
+
+	&__digit-item{
+		color: #fff;
+		letter-spacing: 0.6px;
+		font: {
+			size: 0.875rem;
+			weight: 400;
+			family: "Montserrat";
+		}
+	}
+
+	&__delimiter{
+		margin: 0px 4px;
+	}
+
+	&__switcher{
+		position: absolute;
+		top: 52px;
+		right: 0px;
+	}
+
+	&__switch-arrow{
+		font-size: 0px;
+		width: 36px;
+		height: 36px;
+		background: #f2d800;
+		border: 0px;
+		cursor: pointer;
+		svg{
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&__left-arrow{
+		svg{
+			transform: rotate(180deg);
+		}
+	}
+
 }

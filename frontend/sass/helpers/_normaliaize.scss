@@ -9,6 +9,10 @@
  *    IE on Windows Phone and in iOS.
  */
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
 }
