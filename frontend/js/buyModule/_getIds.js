@@ -1,4 +1,4 @@
-export function getBoardIds(cb, publishEvent){
+export function getBoardIds(cb, errcb, publishEvent){
 	return function(url){
 		fetch(url,{
 			method: 'post'
@@ -8,7 +8,8 @@ export function getBoardIds(cb, publishEvent){
 			cb(publishEvent, data);
 		})
 		.catch(err => {
-			throw data;
+			errcb();
+			throw err;
 		})	
 	}
 }

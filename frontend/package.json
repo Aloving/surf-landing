@@ -21,6 +21,7 @@
     "gulp-imagemin": "^3.2.0",
     "gulp-jsbeautifier": "^2.0.4",
     "gulp-pug": "^3.3.0",
+    "gulp-ruby-sass": "^2.1.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-streamify": "^1.0.2",
@@ -53,6 +54,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "baron": "^2.2.9",
     "rxjs": "^5.3.1",
     "zepto": "^1.2.0"
   },

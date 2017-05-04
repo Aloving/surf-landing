@@ -1,13 +1,99 @@
 section.buy-module
 	h2.section-heading.section-heading__boards.buy-module__header Boards
-	.buy-module__spinner
+	.buy-module__spinner.hidden
 		img(src="./images/ring-alt.gif", alt="")
+	.buy-module__board.board-wall
+		.board-wall__gallery
+			.board-wall__main-image.js-board-wall_main-image
+				img(src="./images/boards/Chocolatine/mains/Chocolatine_1.png", alt="Chocolatine_1")
+			.board-wall__previews
+				a.board-wall__preview.board-wall__preview_active.js-board-wall_preview(href="./images/boards/Chocolatine/mains/Chocolatine_1.jpg")
+					img(src="./images/boards/Chocolatine/previews/Chocolatine_1.jpg", alt="Chocolatine_1")
+				a.board-wall__preview.js-board-wall_preview(href="./images/boards/Chocolatine/mains/Chocolatine_2.jpg")
+					img(src="./images/boards/Chocolatine/previews/Chocolatine_2.jpg", alt="Chocolatine_2")
+				a.board-wall__preview.js-board-wall_preview(href="./images/boards/Chocolatine/mains/Chocolatine_3.jpg")
+					img(src="./images/boards/Chocolatine/previews/Chocolatine_3.jpg", alt="Chocolatine_3")
+		.board-wall__descriptions
+			.board-wall__common-information
+				.board-wall__name 
+					p.board-wall__capital-name Chocolatine
+					p.board-wall__by-tag (by Christiaan Bradley)
+				.board-wall__rating
+					.board-wall__star
+						svg
+							use(xlink:href="#golden-star")
+					.board-wall__star
+						svg
+							use(xlink:href="#golden-star")
+					.board-wall__star
+						svg
+							use(xlink:href="#golden-star")
+					.board-wall__star
+						svg
+							use(xlink:href="#golden-star")
+					.board-wall__star
+						svg
+							use(xlink:href="#empty-star")
+					span.board-wall__total-marks
+						|(52)
+			.board-wall__text-content
+				ul.board-wall__tabs-items
+					li.board-wall__tab
+						a.js-board-wall-tab-item(data-tab-item="0" href="#") Description
+					li.board-wall__tab.board-wall__tab_active
+						a.js-board-wall-tab-item(data-tab-item="1" href="#") Surf conditions
+					li.board-wall__tab
+						a.js-board-wall-tab-item(data-tab-item="2" href="#") Dimensions
+				ul.board-wall__tabs-containers
+					li.board-wall__tab-container.board-wall__description-container.js-board-wall-tab-container(data-tab-container="0")
+						p Chocolatine.  Named after Bradley’s favourite French Breakfast snack the Chocolatine is the board to help you start the day right. It is an evolution of the 2014 Best Seller “The Pie” with its tail pulled in to handle hollower waves. The wide point is forward giving it paddling power,  the lower rocker makes generating speed easy and the 5 fin setup means it can be surfed in any conditions in any way. The Chocolatine is a world traveler. If you can only afford one board this year, the Chocolatine is it!
+					li.board-wall__tab-container.board-wall__tab-container_active.board-wall__conditions-container.js-board-wall-tab-container(data-tab-container="0")
+						.board-wall__conditions-content
+							.board-wall__conditions-block
+								ul.board-wall__conditions-list
+									li.board-wall__condition-item Knee high
+									li.board-wall__condition-item Waist-head high
+									li.board-wall__condition-item Overhead
+								ul.board-wall__conditions-pics
+									li.board-wall__condition-pic
+										img(src="./images/spec_ft1_enabled.png")
+									li.board-wall__condition-pic
+										img(src="./images/spec_ft2.png")
+									li.board-wall__condition-pic
+										img(src="./images/spec_ft3.png")
+							ul.board-wall__expirense-tile
+								li.board-wall__tile-title 
+									span Beginner
+									ul.board-wall__tile.board-wall__tile_active_1
+										li.board-wall__till-block
+										li.board-wall__till-block
+										li.board-wall__till-block
+								li.board-wall__tile-title 
+									span Intermediate
+									ul.board-wall__tile.board-wall__tile_active_3
+										li.board-wall__till-block
+										li.board-wall__till-block
+										li.board-wall__till-block
+								li.board-wall__tile-title
+									span Pro
+									ul.board-wall__tile.board-wall__tile_active_2
+										li.board-wall__till-block
+										li.board-wall__till-block
+										li.board-wall__till-block
+
+
+					li.board-wall__tab-container.board-wall__demensions-container.js-board-wall-tab-container(data-tab-container="0")
+						p Chocolatine.  Named after Bradley’s favourite French Breakfast snack the Chocolatine is the board to help you start the day right. It is an evolution of the 2014 Best Seller “The Pie” with its tail pulled in to handle hollower waves. The wide point is forward giving it paddling power,  the lower rocker makes generating speed easy and the 5 fin setup means it can be surfed in any conditions in any way. The Chocolatine is a world traveler. If you can only afford one board this year, the Chocolatine is it!
+			.board-wall__price-section
+				span.board-wall__price $499.99
+				a(href="#").board-wall__buy-btn buy now
+
 	if (counts > 1)
 		.buy-module__switcher
-			button.buy-module__switch-arrow.buy-module__left-arrow
+			button.buy-module__switch-arrow.buy-module__left-arrow.js-backward-arrow
 				svg
 					use(xlink:href="#right-arrow")
-			button.buy-module__switch-arrow.buy-module__right-arrow
+			button.buy-module__switch-arrow.buy-module__right-arrow.js-forward-arrow
 				svg
 					use(xlink:href="#right-arrow")
 	.buy-module__counters

@@ -1,18 +1,55 @@
 import 'babel-polyfill';
-import Rx from 'rxjs';
 
-import { mediator } from './surfCore';
+import { mediator } from './corePubSub';
 import { buyModuleFacade } from './buyModule/buyModuleFacade';
 
+/*
+	@gettingIdsUrl 	= get url from 'body - tag' for getting ids of goods
+	@gettingIds 		= get ids of goods
+	@needIttem 			= say for pubsub that need item
+*/
+
+let lifeCiclce = {
+	gettingIdsUrl: 'gettingIdsUrl',
+	gettingIds: 'gettingIds',
+	needItem: 'needItem'
+}
 
 // initialize buy module
 try{
-	mediator.subscribe('gettingIdsUrl', buyModuleFacade._getBoardIds(mediator.publish, 'gettingIds'));
-	mediator.subscribe('gettingIds', buyModuleFacade._logging)
 
-	mediator.publish('gettingIdsUrl', buyModuleFacade._gettingUrlForGettingIds());
-	// mediator.publish('gettingIds', buyModuleFacade._getBoardIds())
+	/*
+		action for getting ids 
+		carring callbacks for publish events
+	*/
+	mediator.subscribe(
+
+		lifeCiclce.gettingIdsUrl,
+		buyModuleFacade.getBoardIds(
+		 	mediator.publish,
+		 	buyModuleFacade.addErrorMessageInToModule,
+		 	lifeCiclce.gettingIds
+		)
+
+	);
+
+	/*
+		subscribers on @gettingIds life tick
+	*/
+	mediator.subscribe(lifeCiclce.gettingIds, buyModuleFacade.initNavigation(mediator.publish, lifeCiclce.needItem));
+	mediator.subscribe(lifeCiclce.gettingIds, buyModuleFacade.paintFirstSlide(mediator.publish, lifeCiclce.needItem));
+
+	/*
+		subcribers on @needItem life tick
+	*/
+	mediator.subscribe(lifeCiclce.needItem, buyModuleFacade.implementItem)
+
+	/* ==============================
+							publishers
+		 ==============================
+	 */
+	mediator.publish(lifeCiclce.gettingIdsUrl, buyModuleFacade.gettingUrlForGettingIds());
 }catch(err){
-	buyModuleFacade._addErrorMessageInToModule();
+	buyModuleFacade.addErrorMessageInToModule();
 	throw err;
 };

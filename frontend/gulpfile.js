@@ -94,7 +94,14 @@ gulp.task('browser-sync', ['sass','bundle','img-min','svg-sprites'], () => {
 gulp.task('sass', () => {
 	gulp.src(`${paths.styles.sassPath}/*.scss`)
 			.pipe(gulpif(!production, sourcemaps.init({loadMaps: true})))
-			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+			.pipe(sass({
+				outputStyle: 'compressed',
+				includePaths: [
+					`${paths.styles.sassPath}`,
+					`${paths.styles.sassPath}/blocks`,
+					`${paths.styles.sassPath}/helpers`
+				]
+			}).on('error', sass.logError))
 			.pipe(autoprefixer({
 					browsers: ['> 1%', 'last 10 versions'],
 					cascade: false
@@ -173,6 +180,6 @@ function handleError(err) {
 	this.emit('end');
 }
 
-let tasks = ['del','browser-sync'];
+let tasks = ['browser-sync'];
 
 gulp.task('default',tasks);

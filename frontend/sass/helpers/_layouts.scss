@@ -4,6 +4,7 @@
 	padding: 0px 15px;
 	width: 100%;
 }
+
 .section-heading{
 	&__boards{
 		@include section-heading(8.138rem, (
@@ -18,4 +19,17 @@
 			opacity: 0;
 		}
 	}
+}
+
+%blue-main-btn{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 14px 32px;
+	font: {
+		family: 'Montserrat';
+		weight: 600;
+		size: 0.875rem;
+	} 
+	background: $main-blue;
 }

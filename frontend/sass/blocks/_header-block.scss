@@ -1,5 +1,6 @@
-@import 'header-block/header-module';
-@import 'header-block/buy-module';
+@import 'header-block/_header-module.scss';
+@import 'header-block/_buy-module.scss';
+@import 'header-block/_board-wall.scss';
 
 .logo h1{
 	color: $black;

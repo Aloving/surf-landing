@@ -1,0 +1,291 @@
+.board-wall{
+	max-height: 100%;
+
+	&__gallery,
+	&__descriptions{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__gallery{
+		width: 535px;
+		padding-top: 60px;
+		position: relative;
+	}
+
+	&__descriptions{
+		padding:{
+			top: 45px;
+			left: 50px;
+			right: 50px;
+		}
+		width: 495px;
+		position: relative;
+		z-index: 3;
+	}
+
+	&__previews{
+		display: inline-block;
+		vertical-align: middle;
+		width: 80px;
+	}
+
+	&__main-image{
+		height: 100%;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		width: 535px - 80px;
+	}
+
+	&__preview{
+		display: block;
+		border: 1px solid #cccccc;
+		&:not(:last-child){
+			margin-bottom: 10px;;
+		}
+		&_active{
+			box-shadow: 0px 0px 0px 2px $main-blue;
+		}
+	}
+
+	&__capital-name{
+		color: $black;
+		font:{
+			size: 1.650rem;
+			weight: 600;
+			family: "Montserrat";
+		}
+	}
+
+	&__by-tag{
+		color: lighten($black, 50%);
+		padding-top: 2px;
+		font-size: 0.850rem;
+	}
+
+	&__name{
+		overflow: hidden;
+		width: 360px;
+		max-height: 82px;
+		margin-bottom: 15px;
+		p{
+			margin: 0px;
+		}
+	}
+
+	&__star{
+		display: inline-block;
+		&:not(:last-child){
+			margin-right: 4px;
+		}
+		svg{
+			width: 13px;
+			height: 13px;
+		}
+	}
+
+	&__total-marks{
+		font-size: 0.750rem;
+		color: #787878;
+		padding-left: 5px;
+	}
+
+	&__text-content{
+		padding-top: 45px;
+		min-height: 320px;
+	}
+
+	&__tabs-items{
+		list-style: none;
+		display: table;
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	&__tab{
+		display: table-cell;
+		text-align: center;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #a0a0a0;
+
+		a{
+			color: #a0a0a0;
+			text-transform: uppercase;
+			text-decoration: none;
+			font:{
+				size: 0.875rem;
+				family: 'Raleway';
+				weight: 600;
+			}
+		}
+
+		&_active{
+			border-bottom: 3px solid $main-blue;
+			a{
+				color: $black;	
+			}
+		}
+	}
+
+	&__tabs-containers{
+		padding: 0px;
+		list-style: none;
+		margin: 0px;
+	}
+
+	&__description-container{
+
+		p{
+			font:{
+				size: 1rem;
+				family: 'Raleway';
+			}
+		height: 190px;
+		overflow-y: scroll;
+			line-height: 1.500rem;
+			color: #787878;
+		}
+	}
+
+	&__tab-container{
+		display: none;
+		margin: 26.5px 0px;
+		&_active{
+			display: block;
+		}
+	}
+
+	&__buy-btn{
+		display: inline-block;
+		vertical-align: middle;
+		@extend %blue-main-btn;
+	}
+
+	&__price{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+		font: {
+			family: 'Montserrat';
+			weight: 700;
+			size: 1.500rem;
+		}
+	}
+
+	&__conditions-content{
+		display: table;
+	}
+
+	&__conditions-block,
+	&__expirense-tile{
+		display: table-cell;
+		vertical-align: top;
+		width: 50%;
+	}
+
+	&__conditions-block{
+		text-align: left;
+	}
+
+	&__conditions-pics{
+		list-style: none;
+		font-size: 0px;
+		margin:0;
+		padding: 0;
+	}
+
+	&__condition-item{
+		color: #787878;
+		font:{
+				size: 0.875rem;
+				family: 'Raleway';
+		}
+		&:not(:last-child){
+			margin-bottom: 7px;
+		}
+	}
+
+	&__conditions-list{
+		min-height: 62px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		margin-bottom: 10px;
+	}
+
+	&__condition-pic{
+		display: inline-block;
+		&:not(:last-child){
+			margin-right: 5px;
+		}
+	}
+
+	&__expirense-tile{
+		list-style: none;
+		text-align: right;
+		li > ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		// padding-left: 80px;
+	}
+
+	&__till-block{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: #beebff;
+		&:not(:last-child){
+			margin-right: 5px;
+		}
+	}
+
+	&__tile{
+		&_active{
+			&_3{
+				.board-wall__till-block{
+					&:nth-child(-1n+3){
+						background: $main-blue;
+					}
+				}
+			}
+
+			&_2{
+				.board-wall__till-block{
+					&:nth-child(-1n+2){
+						background: $main-blue;
+					}
+				}
+			}
+
+			&_1{
+				.board-wall__till-block{
+					&:nth-child(1){
+						background: $main-blue;
+					}
+				}
+			}
+		}
+	}
+
+	&__tile-title{
+		margin-bottom: 5px;
+		& > span{
+			color: #787878;
+			text-align: left;
+			font:{
+					size: 0.875rem;
+					family: 'Raleway';
+			}
+			width: 100px;
+			display: inline-block;
+		}
+	}
+
+	&__tile{
+		display: inline-block;
+	}
+}

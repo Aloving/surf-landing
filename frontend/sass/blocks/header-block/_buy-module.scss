@@ -16,6 +16,19 @@ $svg-spinner-size: 115px;
 	z-index: 2;
 	background: #fff;
 
+	&:after{
+		content: "";
+		position: absolute;
+		left: -346px;
+		top: -281px;
+		height: 870px;
+		width: 614px;
+		background: #00d2ff;
+		// background: $main-blue;
+		z-index: -1;
+		transform: rotate(38deg);
+	}
+
 	&__spinner{
 		height: 100%;
 		width: 100%;
