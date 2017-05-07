@@ -32,6 +32,7 @@ $svg-spinner-size: 115px;
 		height: 100%;
 		width: 100%;
 		position: absolute;
+		transition: .25s;
 		img{
 			position: absolute;
 			top: ($buy-module-height / 2) - ($svg-spinner-size / 2);
@@ -39,6 +40,9 @@ $svg-spinner-size: 115px;
 			vertical-align: middle;
 			width: $svg-spinner-size;
 			height: $svg-spinner-size;
+		}
+		&_hidden{
+			opacity: 0;
 		}
 	}
 

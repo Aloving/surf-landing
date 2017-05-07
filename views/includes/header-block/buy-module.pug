@@ -1,6 +1,6 @@
 section.buy-module
 	h2.section-heading.section-heading__boards.buy-module__header Boards
-	.buy-module__spinner.js-board-spinner
+	.buy-module__spinner.buy-module__spinner_hidden.js-board-spinner
 		img(src="./images/ring-alt.gif", alt="")
 	.buy-module__content-zone.js-board-content
 
@@ -14,7 +14,7 @@ section.buy-module
 					use(xlink:href="#right-arrow")
 	.buy-module__counters
 		.buy-module__digits
-			span.buy-module__digit-item.buy-module__current
+			span.buy-module__digit-item.buy-module__current.js-current-position
 				|01
 			span.buy-module__digit-item.buy-module__delimiter
 				|/

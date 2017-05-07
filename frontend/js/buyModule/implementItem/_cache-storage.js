@@ -14,7 +14,6 @@ export function cascheStorage(publishCacheItem, createItem){
 		function addItem(item){
 			let id = item.querySelector('.js-id').dataset.productid;
 			localCache[id] = item;
-				console.log(localCache);
 		}
 
 		return{

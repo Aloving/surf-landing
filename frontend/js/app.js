@@ -3,8 +3,6 @@ import 'babel-polyfill';
 import { mediator } from './corePubSub';
 import { buyModuleFacade } from './buyModule/buyModuleFacade';
 
-// import { initWallActions } from './buyModule/templateBoardWall/_init-wall-actions';
-
 /*
 	@gettingIdsUrl 	= get url from 'body - tag' for getting ids of goods
 	@gettingIds 		= get ids of goods
@@ -96,21 +94,3 @@ try{
 	buyModuleFacade.addErrorMessageInToModule();
 	throw err;
 };
-
-// document.querySelector('.board-wall').innerHTML = '';
-
-// var b = document.createElement('div');
-// b.classList.add('board-wall');
-// console.log(b);
-
-// b.innerHTML = a;
-// initWallActions(b);
-
-// setTimeout(function(){
-// 	document.querySelector('.js-board-content').append(b);	
-// }, 3000);
-
-
-// let boardWall = document.querySelector('.board-wall');
-// 
-// initWallActions(boardWall);	

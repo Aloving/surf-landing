@@ -1,3 +1,5 @@
+import { counterPosition } from './_counter-position';
+
 export function initNavigation(publishcb){
 
 	return function(ids){
@@ -9,12 +11,14 @@ export function initNavigation(publishcb){
 		forwardArrow.addEventListener('click', (evt) => {
 			evt.preventDefault();
 			currentPosition == allPositions ? currentPosition = 0 : ++currentPosition;
+			counterPosition(currentPosition);
 			publishcb(ids[currentPosition]);
 		});
 
 		backwardArrow.addEventListener('click', (evt) => {
 			evt.preventDefault();
 			!currentPosition ? currentPosition = allPositions : --currentPosition;
+			counterPosition(currentPosition);
 			publishcb(ids[currentPosition]);
 		});
 	}

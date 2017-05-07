@@ -1,15 +1,9 @@
+import { tabSliderElementPosition } from '../../../../modules/tabSliderElementPosition';
+
 export function tabsActions(element){
 	
 	let tabs = element.querySelectorAll('.js-board-wall-tab-item');
-	let activeTab = element.querySelector('.board-wall__tab_active');
-	let sliderElement = element.querySelector('.js-board-tab-slider-element');
 
-	function tabSliderElementPosition(activeElement){
-		sliderElement.style.left = `${activeElement.offsetLeft}px`;
-		sliderElement.style.width = `${activeElement.offsetWidth}px`;	
-	}
-
-	tabSliderElementPosition(activeTab);
 	tabs.forEach((item) => {
 		item.addEventListener('click', function(evt){
 
@@ -43,7 +37,7 @@ export function tabsActions(element){
 			//add active class in to this element
 			this.classList.add('board-wall__tab_active');
 
-			tabSliderElementPosition(this);
+			tabSliderElementPosition(element, this);
 
 		});
 	});

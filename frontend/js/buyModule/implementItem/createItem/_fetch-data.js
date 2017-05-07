@@ -6,6 +6,9 @@ export function fetchData(publishcb){
 		.then(data => data.json())
 		.then(data => {
 			publishcb(data);
-		});
+		})
+		.catch((err) => {
+			throw err;
+		})
 	}
 }

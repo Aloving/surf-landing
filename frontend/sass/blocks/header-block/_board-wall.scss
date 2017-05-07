@@ -1,5 +1,10 @@
 .board-wall{
 	max-height: 100%;
+	transition: .55s;
+
+	&_hidden{
+		opacity: 0;
+	}
 
 	&__gallery,
 	&__descriptions{

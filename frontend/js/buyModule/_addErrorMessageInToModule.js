@@ -5,7 +5,7 @@ export function addErrorMessageInToModule(){
 	errorMessage.innerText = 'A technical error';
 	buyModuleError.setAttribute('class', 'buy-module__error-message');
 
-	buyModuleError.append(errorMessage);
+	buyModuleError.appendChild(errorMessage);
 	
 	document.querySelector('.buy-module').append(buyModuleError);
 	document.querySelector('.section-heading__boards').classList.add('section-heading__boards_errored');

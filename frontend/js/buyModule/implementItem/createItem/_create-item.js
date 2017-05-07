@@ -28,6 +28,8 @@ mediator.subscribe(lifeCycle.initWallActions, facade.initWallActions(
 export function createItem(publishcb){
 	mediator.subscribe(lifeCycle.createdElement, publishcb);
 	return function(id){
-		mediator.publish(lifeCycle.needData, id);
+		setTimeout(() => {
+			mediator.publish(lifeCycle.needData, id);
+		}, 500);
 	}
 }

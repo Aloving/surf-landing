@@ -45,8 +45,6 @@ let cascheStorage = facade.cascheStorage(
 export function implementItem(publishItem){
 	mediator.subscribe(lifeCycle.publishDOMelement, publishItem);
 	return function(id){
-		setTimeout(function(){
-			mediator.publish(lifeCycle.needItem, id);
-		}, 1500);
+		mediator.publish(lifeCycle.needItem, id);
 	}
 }
