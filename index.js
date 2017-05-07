@@ -33,6 +33,13 @@ app.get('/', (req,res) => {
 	res.render('index', data);
 });
 
+app.post('/getboard/:id', (req,res) => {
+	let itemId = req.params.id;
+	let itemJson = boardsData.boards.filter(item => item._id == itemId)[0];
+
+	res.send(itemJson);
+});
+
 app.post(boardIdsUrl, (req,res) => {
 	res.send(boardsIds);
 });

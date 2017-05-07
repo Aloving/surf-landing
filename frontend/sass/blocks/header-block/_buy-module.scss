@@ -24,7 +24,6 @@ $svg-spinner-size: 115px;
 		height: 870px;
 		width: 614px;
 		background: #00d2ff;
-		// background: $main-blue;
 		z-index: -1;
 		transform: rotate(38deg);
 	}
@@ -32,7 +31,7 @@ $svg-spinner-size: 115px;
 	&__spinner{
 		height: 100%;
 		width: 100%;
-		position: relative;
+		position: absolute;
 		img{
 			position: absolute;
 			top: ($buy-module-height / 2) - ($svg-spinner-size / 2);
@@ -71,6 +70,7 @@ $svg-spinner-size: 115px;
 		position: absolute;
 		top: 52px;
 		right: 0px;
+		z-index: 10;
 	}
 
 	&__switch-arrow{

@@ -1,6 +1,6 @@
-export function paintFirstSlide(publishcb, publishTag){
+export function paintFirstSlide(publishcb){
 	return function(gettingIds){
 		let id = gettingIds[0];
-		publishcb(publishTag, id);
+		publishcb(id);
 	}
 }

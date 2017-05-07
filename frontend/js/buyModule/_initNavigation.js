@@ -1,4 +1,4 @@
-export function initNavigation(publishcb, publishTag){
+export function initNavigation(publishcb){
 
 	return function(ids){
 		let forwardArrow = document.querySelector('.js-forward-arrow');
@@ -9,13 +9,13 @@ export function initNavigation(publishcb, publishTag){
 		forwardArrow.addEventListener('click', (evt) => {
 			evt.preventDefault();
 			currentPosition == allPositions ? currentPosition = 0 : ++currentPosition;
-			publishcb(publishTag, ids[currentPosition]);
+			publishcb(ids[currentPosition]);
 		});
 
 		backwardArrow.addEventListener('click', (evt) => {
 			evt.preventDefault();
 			!currentPosition ? currentPosition = allPositions : --currentPosition;
-			publishcb(publishTag, ids[currentPosition]);
+			publishcb(ids[currentPosition]);
 		});
 	}
 }

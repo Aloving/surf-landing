@@ -1,0 +1,120 @@
+.board-wall__gallery
+	.board-wall__main-image
+		img.js-board-wall_main-image(src= images[0].mainImage, alt="Chocolatine_main-image")
+	.board-wall__previews
+		- for (var j = 0; j < images.length; j++)
+				if j == 0
+					a.board-wall__preview.board-wall__preview_active.js-board-wall_preview(href= images[j].mainImage)
+						img(src= images[j].preview, alt="")
+				else
+					a.board-wall__preview.js-board-wall_preview(href= images[j].mainImage)
+						img(src= images[j].preview, alt="")
+
+.board-wall__descriptions
+	.board-wall__common-information
+		.board-wall__name 
+			p.board-wall__capital-name Chocolatine
+			p.board-wall__by-tag (by Christiaan Bradley)
+		.board-wall__rating
+			-var maxStars = 5
+			while maxStars
+				if rating <= maxStars
+					.board-wall__star
+						svg
+							use(xlink:href="#golden-star")
+					-maxStars--
+				else
+					.board-wall__star
+						svg
+							use(xlink:href="#empty-star")
+					-maxStars--
+
+			span.board-wall__total-marks= ratingVoices
+	.board-wall__text-content
+		ul.board-wall__tabs-items
+			li.board-wall__tab.board-wall__tab_active.js-board-wall-tab-item(data-tabItem="0" href="#") Description
+			li.board-wall__tab.js-board-wall-tab-item(data-tabItem="1" href="#") Surf conditions
+			li.board-wall__tab.js-board-wall-tab-item(data-tabItem="2" href="#") Dimensions
+			span.board-wall__slider-element.js-board-tab-slider-element
+		ul.board-wall__tabs-containers
+			li.board-wall__tab-container.board-wall__description-container.board-wall__tab-container_active.js-board-wall-tab-container(data-tabcontainer="0")
+				p= description
+			li.board-wall__tab-container.board-wall__conditions-container.js-board-wall-tab-container(data-tabcontainer="1")
+				.board-wall__conditions-content
+					.board-wall__conditions-block
+						ul.board-wall__conditions-list
+							if surfConditions.basics.kneeHigh
+								li.board-wall__condition-item Knee high
+							if surfConditions.basics.WaistHeadHigh
+								li.board-wall__condition-item Waist-head high
+							if surfConditions.basics.Overhead
+								li.board-wall__condition-item Overhead
+						ul.board-wall__conditions-pics
+							if surfConditions.basics.kneeHigh
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft1_enabled.png")
+							else
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft1.png")
+							if surfConditions.basics.WaistHeadHigh
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft2_enabled.png")
+							else
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft2.png")
+							if surfConditions.basics.Overhead
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft3_enabled.png")
+							else
+								li.board-wall__condition-pic
+									img(src="./images/spec_ft3.png")
+
+					ul.board-wall__expirense-tile
+						li.board-wall__tile-title
+							span Beginner
+							ul(class=`board-wall__tile.board-wall__tile_active_${surfConditions.experience.Beginner}`)
+								li.board-wall__till-block
+								li.board-wall__till-block
+								li.board-wall__till-block
+						li.board-wall__tile-title
+							span Intermediate
+							ul(class=`board-wall__tile.board-wall__tile_active_${surfConditions.experience.Intermediate}`)
+								li.board-wall__till-block
+								li.board-wall__till-block
+								li.board-wall__till-block
+						li.board-wall__tile-title
+							span Pro
+							ul(class=`board-wall__tile.board-wall__tile_active_${surfConditions.experience.Pro}`)
+								li.board-wall__till-block
+								li.board-wall__till-block
+								li.board-wall__till-block
+			
+									
+			li.board-wall__tab-container.board-wall__demensions-container.js-board-wall-tab-container(data-tabcontainer="2")
+				table(cellspacing="0")
+					thead
+						th 
+							|Length 
+							br
+							|(Feet)
+						th 
+							|Width 
+							br
+							|(Inches)
+						th 
+							|Thickness  
+							br
+							|(Inches)
+						th 
+							|Volume  
+							br
+							|(Liters)
+					- for (var x = 0; x < Dimensions.LengthProp.length; x++)
+							tr
+								td= Dimensions.LengthProp[x]
+								td= Dimensions.Width[x]
+								td= Dimensions.Thickness[x]
+								td= Dimensions.Volume[x]
+	.board-wall__price-section
+		span.board-wall__price= `$${price}`
+		a(href="#" data-productid= _id).board-wall__buy-btn.js-id buy now
