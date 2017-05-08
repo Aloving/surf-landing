@@ -3,10 +3,6 @@ export function clearDOMcontainer(){
 	let boardWall = document.querySelector('.board-wall');
 
 	if(boardWall){
-		debugger;
 		boardWall.classList.add('board-wall_hidden');
-		// setTimeout(() => {
-		// 	boardContainer.innerHTML = '';
-		// }, 500);
 	}
 }

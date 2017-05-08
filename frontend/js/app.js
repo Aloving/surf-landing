@@ -1,12 +1,20 @@
-import 'babel-polyfill';
-
-import { mediator } from './corePubSub';
-import { buyModuleFacade } from './buyModule/buyModuleFacade';
+/*
+	import depencies
+*/
+import 'babelify-es6-polyfill';
+import 'whatwg-fetch';
 
 /*
-	@gettingIdsUrl 	= get url from 'body - tag' for getting ids of goods
-	@gettingIds 		= get ids of goods
-	@needIttem 			= say for pubsub that need item
+	import main modules
+*/
+import { mediator } from './app-mediator';
+import { buyModuleFacade } from './buyModule/__facade__buymodule';
+
+/*
+	@gettingIdsUrl 				= get url from 'body - tag' for getting ids of goods
+	@gettingIds 					= getting ids of goods
+	@needIttem 						= tell the pubsub that you need a item
+	@implementedItem 			= realization of item
 */
 
 let lifeCycle = {
@@ -20,7 +28,7 @@ let lifeCycle = {
 try{
 
 	/*
-		subscribers on @gettingIdsUrl life tick
+		subscribers on @gettingIdsUrl	
 	*/
 	mediator.subscribe(
 		lifeCycle.gettingIdsUrl,
@@ -32,7 +40,7 @@ try{
 	);
 
 	/*
-		subscribers on @gettingIds life tick
+		subscribers on @gettingIds
 	*/
 
 	mediator.subscribe(
@@ -92,5 +100,5 @@ try{
 	mediator.publish(lifeCycle.gettingIdsUrl, buyModuleFacade.gettingUrlForGettingIds());
 }catch(err){
 	buyModuleFacade.addErrorMessageInToModule();
-	throw err;
+	console.error(err);
 };

@@ -1,0 +1,115 @@
+$buy-module-width: 1030px;
+$buy-module-height: 600px;
+$svg-spinner-size: 115px;
+
+.buy-module{
+	width: $buy-module-width;
+	height: $buy-module-height;
+	overflow: hidden;
+	box-shadow: 0px 0px 30px 8px rgba(0,0,0,.34);
+	margin:{
+		top: 151px;
+		right: auto;
+		left: auto;
+	}
+	position: relative;
+	z-index: 2;
+	background: #fff;
+
+	&:after{
+		content: "";
+		position: absolute;
+		left: -346px;
+		top: -281px;
+		height: 870px;
+		width: 614px;
+		background: #00d2ff;
+		z-index: -1;
+		transform: rotate(38deg);
+	}
+
+	&__spinner{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		transition: .25s;
+		img{
+			position: absolute;
+			top: ($buy-module-height / 2) - ($svg-spinner-size / 2);
+			left: ($buy-module-width / 2) - ($svg-spinner-size / 2);
+			vertical-align: middle;
+			width: $svg-spinner-size;
+			height: $svg-spinner-size;
+		}
+		&_hidden{
+			opacity: 0;
+		}
+	}
+
+	&__digits{
+		background: $black;
+		position: absolute;
+		top: 88px;
+		width: 72px;
+		text-align: center;
+		right: 0px;
+		padding: 10px 7px;
+	}
+
+	&__digit-item{
+		color: #fff;
+		letter-spacing: 0.6px;
+		font: {
+			size: 0.875rem;
+			weight: 400;
+			family: "Montserrat";
+		}
+	}
+
+	&__delimiter{
+		margin: 0px 4px;
+	}
+
+	&__switcher{
+		position: absolute;
+		top: 52px;
+		right: 0px;
+		z-index: 10;
+	}
+
+	&__switch-arrow{
+		font-size: 0px;
+		width: 36px;
+		height: 36px;
+		background: #f2d800;
+		border: 0px;
+		cursor: pointer;
+	}
+
+	&__arrow-svg-container{
+		display: block;
+		svg{
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&__left-arrow &{
+		&__arrow-svg-container{		
+			transform: rotate(180deg);
+		}
+	}
+
+	&__error-message{
+		width: 100%;
+		height: 100%;
+		display: table;
+		text-align: center;
+		p{
+			display: table-cell;
+			vertical-align: middle;
+			@include section-heading(6rem, (color: darken($section-heading-color,5%)));
+		}
+	}
+
+}

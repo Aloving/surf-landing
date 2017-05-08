@@ -1,0 +1,13 @@
+@import 'header-section/_header-module.scss';
+@import 'header-section/_buy-module.scss';
+@import 'header-section/_board-wall.scss';
+
+.logo h1{
+	color: $black;
+	margin: 0px;
+	font:{
+		size: 2.125rem;
+		family: 'Montserrat';
+		weight: 700;
+	}
+}

@@ -1,3 +1,3 @@
 export function gettingUrlForGettingIds(){
-	return document.getElementsByTagName('body')[0].dataset.idsurl;
+	return document.getElementsByTagName('body')[0].getAttribute('data-idsurl');
 }

@@ -1,7 +1,10 @@
 export function getBoardIds(cb, errcb, publishEvent){
 	return function(url){
 		fetch(url,{
-			method: 'post'
+			method: 'post',
+			headers: {
+    		'Content-Type': 'application/json'
+  		}
 		})
 		.then(response => response.json())
 		.then(data => {

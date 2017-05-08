@@ -1,6 +1,7 @@
 let express = require('express');
 let app 		= express();
-let boardsData 		= require('./data.js')
+let boardsData 		= require('./data')
+let resolve = require('browser-resolve');
 
 let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')

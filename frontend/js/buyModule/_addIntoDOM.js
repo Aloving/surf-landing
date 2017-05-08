@@ -17,7 +17,7 @@ export function addIntoDOM(item){
 		setTimeout(() => {
 			item.classList.remove('board-wall_hidden');
 			tabSliderElementPosition(item, activeTabOfElement);
-		}, 10)
+		}, 10);
 	}
 
 

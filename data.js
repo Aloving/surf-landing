@@ -45,17 +45,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 3,
 					ratingVoices: 10,
-					price: '430.10',
+					price: '310.76',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Killer/previews/Killer_1.jpg',
+							mainImage: './images/boards/Killer/mains/Killer_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Killer/previews/Killer_2.jpg',
+							mainImage: './images/boards/Killer/mains/Killer_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Killer/previews/Killer_3.jpg',
+							mainImage: './images/boards/Killer/mains/Killer_3.png'
 						}
 					],
 					description: 'The Killer by Bradley will do to waves what it’s namesake implies. It has a flat exit rocker under the feet, flipped tail and wide point forward. These 3 points equate to unrivalled speed yet with a surprisingly tight turning circle. This is an amazing small wave board but its rail line gives it fantastic drive and the ability to handle bigger waves. The Killer continues Bradley’s love affair with the swallow tail and with a single to double concave it will blow your mind. Great summer fun.',
@@ -84,17 +84,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 2,
 					ratingVoices: 9,
-					price: '430.10',
+					price: '190.45',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Gladiator/previews/Gladiator_1.jpg',
+							mainImage: './images/boards/Gladiator/mains/Gladiator_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Gladiator/previews/Gladiator_2.jpg',
+							mainImage: './images/boards/Gladiator/mains/Gladiator_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Gladiator/previews/Gladiator_3.jpg',
+							mainImage: './images/boards/Gladiator/mains/Gladiator_3.png'
 						}
 					],
 					description: 'The Gladiator is the Bradley small wave performance craft designed for Leo Fioravanti to take on the world in the less than perfect waves of the WQS. Thinner nose and tail for liveliness, straight outline down to tail for maximum drive in small waves, wider tail for acceleration. Standard squash tail with single to double concave.',
@@ -123,17 +123,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 4,
 					ratingVoices: 44,
-					price: '430.10',
+					price: '240.65',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Viper-4/previews/Viper-4_1.jpg',
+							mainImage: './images/boards/Viper-4/mains/Viper-4_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Viper-4/previews/Viper-4_2.jpg',
+							mainImage: './images/boards/Viper-4/mains/Viper-4_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Viper-4/previews/Viper-4_3.jpg',
+							mainImage: './images/boards/Viper-4/mains/Viper-4_3.png'
 						}
 					],
 					description: 'The Viper 4 is the evolution of the Viper collection. Different again from all the rest. Arriving at the Viper3, an aggressive beast, Bradley ventured back to a very easy style of performance grovelor. Wider dimensions, softer rails and more area front and rear made the Viper4 more user friendly for the average surfer. Basically a board that requires less effort for a fun surf.',
@@ -161,17 +161,17 @@ module.exports = {
 					name: 'Pie',
 					rating: 5,
 					ratingVoices: 225,
-					price: '430.10',
+					price: '890.80',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Pie/previews/Pie_1.jpg',
+							mainImage: './images/boards/Pie/mains/Pie_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Pie/previews/Pie_2.jpg',
+							mainImage: './images/boards/Pie/mains/Pie_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Pie/previews/Pie_3.jpg',
+							mainImage: './images/boards/Pie/mains/Pie_3.png'
 						}
 					],
 					description: 'The Pie is the bastard child of the Viper Rocker and the Thing Template.  Large nose template for fast paddling and straighter rocker for fast surfing. Thicker in the middle of the board for speed but tapered rails for carving and good turns. A nice diamond tail with wings placed well back to maintain speed and control your manoeuvres.',
@@ -196,33 +196,33 @@ module.exports = {
 				},			
 				{
 					_id: '5909925751ccda3b2705b71a',
-					name: 'Devil',
+					name: 'CB1',
 					byTag: 'Christiaan Bradley',
 					rating: 3,
 					ratingVoices: 532,
-					price: '430.10',
+					price: '1110.31',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/CB1/previews/CB1_1.jpg',
+							mainImage: './images/boards/CB1/mains/CB1_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/CB1/previews/CB1_2.jpg',
+							mainImage: './images/boards/CB1/mains/CB1_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/CB1/previews/CB1_3.jpg',
+							mainImage: './images/boards/CB1/mains/CB1_3.png'
 						}
 					],
-					description: 'The Devil will never die! It has been reworked and modified over the last five years but is essential form remains the same. Now available primarily as a thumbtail squash, with round and swallow as options. Low entry rocker makes for fast paddling and slightly low tail rocker for generating speed in all conditions. It also handles fast barrelling waves and loves the quad setup.',
+					description: 'The CB1 is Bradleys premier performance surfboard for high level surfers. Designed for good waves and powerful surfing. Customize your concaves on this model. Nice free flowing rocker from nose to tail to handle speed, power and critical turns.',
 					surfConditions: {
 						basics: {
 							kneeHigh: false,
-							WaistHeadHigh: true,
-							Overhead: false
+							WaistHeadHigh: false,
+							Overhead: true
 						},
 						experience:{
-							Beginner: 1,
-							Intermediate: 1,
+							Beginner: 0,
+							Intermediate: 2,
 							Pro: 3
 						}
 					},
@@ -239,17 +239,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 23,
 					ratingVoices: 52,
-					price: '430.10',
+					price: '741',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Thing/previews/Thing_1.jpg',
+							mainImage: './images/boards/Thing/mains/Thing_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Thing/previews/Thing_2.jpg',
+							mainImage: './images/boards/Thing/mains/Thing_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Thing/previews/Thing_3.jpg',
+							mainImage: './images/boards/Thing/mains/Thing_3.png'
 						}
 					],
 					description: 'The Thing is a bizarre little beast. Very curvy and with thicker rails and a wide planeshape throughout the front half of the board. It is for high performance in smaller powerful waves but will handle bigger waves as well. The ideal board for small reef breaks or sucky beachbreaks and amazing in the air.',
@@ -278,17 +278,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 4,
 					ratingVoices: 44,
-					price: '430.10',
+					price: '44',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Roman/previews/Roman_1.jpg',
+							mainImage: './images/boards/Roman/mains/Roman_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Roman/previews/Roman_2.jpg',
+							mainImage: './images/boards/Roman/mains/Roman_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Roman/previews/Roman_3.jpg',
+							mainImage: './images/boards/Roman/mains/Roman_3.png'
 						}
 					],
 					description: 'High Performance short board used and tested since 2014 by Leo Fioravanti in all conditions. The Roman has a mid entry rocker easing into a flat middle with an aggressive tail lift for tight turning power. The lower middle rocker will increase your planning speed over dead sections. It comes standard with a Squash tail and single to slight double is the bottom contour. Leo’s standard dimensions are 5\'11 x 18 5/8 x 2 5/16.',
@@ -317,17 +317,17 @@ module.exports = {
 					byTag: 'Christiaan Bradley',
 					rating: 1,
 					ratingVoices: 12,
-					price: '430.10',
+					price: '89.10',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/Mosselman/previews/Mosselman_1.jpg',
+							mainImage: './images/boards/Mosselman/mains/Mosselman_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/Mosselman/previews/Mosselman_2.jpg',
+							mainImage: './images/boards/Mosselman/mains/Mosselman_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/Mosselman/previews/Mosselman_3.jpg',
+							mainImage: './images/boards/Mosselman/mains/Mosselman_3.png'
 						}
 					],
 					description: 'The Mosselman designed to give maximum amount of planning surface creating speed in below average conditions but still allowing for regular performance surfing turns. With a full nose for forward thrust and flatter rocker fed into a smooth round tail gives the board amazing versatility. The volume has been placed to help carry you through completed turns even when the wave loses power. The original test machine was tested locally in the north sea and was given a 5 star rating. Order a few inches shorter than your standard performance board for same length and thicker and fatter if you are looking for comfort. 5 fin to give those who like the option of quad in small surf.',
@@ -352,21 +352,21 @@ module.exports = {
 				},
 				{
 					_id: '5909947fc3be17108633e5c8',
-					name: 'Barcelona',
+					name: 'New Barcelona',
 					byTag: 'Christiaan Bradley',
 					rating: 3,
 					ratingVoices: 46,
-					price: '430.10',
+					price: '140',
 					images: [
 						{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_1.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_1.png'
+							preview: './images/boards/NewBarcelona/previews/NewBarcelona_1.jpg',
+							mainImage: './images/boards/NewBarcelona/mains/NewBarcelona_1.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_2.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_2.png'
+							preview: './images/boards/NewBarcelona/previews/NewBarcelona_2.jpg',
+							mainImage: './images/boards/NewBarcelona/mains/NewBarcelona_2.png'
 						},{
-							preview: './images/boards/Chocolatine/previews/Chocolatine_3.jpg',
-							mainImage: './images/boards/Chocolatine/mains/Chocolatine_3.png'
+							preview: './images/boards/NewBarcelona/previews/NewBarcelona_3.jpg',
+							mainImage: './images/boards/NewBarcelona/mains/NewBarcelona_3.png'
 						}
 					],
 					description: 'The New Barcelona by Bradley has redefined what you can achieve in moderate surfing conditions. Following the enormous success or the Original Barcelona the New Barca has encorporated Bradley’s love of the smooth curve by slightly rounding the tail area and nose template. Wide nose and tail area combined with a straight rail line give this board extra speed in very small and weak surf. Defined by its short length, the New Barcelona has the ability to do standard manoeuvres in small surf. The V/Double concave bottom allows the rail line to be flatter, this allows the board to actually increase speed when turning. A really fun surfboard for those who like to get the most out of extremely average conditions.',

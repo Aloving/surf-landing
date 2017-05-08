@@ -1,6 +1,6 @@
 .board-wall__gallery
 	.board-wall__main-image
-		img.js-board-wall_main-image(src= images[0].mainImage, alt= `${name}_main-image`)
+		img.js-board-wall_main-image(src= images[0].mainImage, alt= '' + name + '_main-image')
 	.board-wall__previews
 		- for (var j = 0; j < images.length; j++)
 				if j == 0
@@ -15,7 +15,7 @@
 		.board-wall__name 
 			p.board-wall__capital-name= name
 			if byTag
-				p.board-wall__by-tag= `(by ${byTag})`
+				p.board-wall__by-tag= '(by ' + byTag + ')'
 		.board-wall__rating
 			-var maxStars = 5
 			while maxStars
@@ -30,7 +30,7 @@
 							use(xlink:href="#empty-star")
 					-maxStars--
 
-			span.board-wall__total-marks= `(${ratingVoices})`
+			span.board-wall__total-marks= '(' + ratingVoices + ')'
 	.board-wall__text-content
 		ul.board-wall__tabs-items
 			li.board-wall__tab.board-wall__tab_active.js-board-wall-tab-item(data-tabItem="0" href="#") Description
@@ -73,19 +73,19 @@
 					ul.board-wall__expirense-tile
 						li.board-wall__tile-title
 							span Beginner
-							ul(class=`board-wall__tile board-wall__tile_active_${surfConditions.experience.Beginner}`)
+							ul(class='board-wall__tile board-wall__tile_active_' + surfConditions.experience.Beginner)
 								li.board-wall__till-block
 								li.board-wall__till-block
 								li.board-wall__till-block
 						li.board-wall__tile-title
 							span Intermediate
-							ul(class=`board-wall__tile board-wall__tile_active_${surfConditions.experience.Intermediate}`)
+							ul(class='board-wall__tile board-wall__tile_active_' + surfConditions.experience.Intermediate)
 								li.board-wall__till-block
 								li.board-wall__till-block
 								li.board-wall__till-block
 						li.board-wall__tile-title
 							span Pro
-							ul(class=`board-wall__tile board-wall__tile_active_${surfConditions.experience.Pro}`)
+							ul(class='board-wall__tile board-wall__tile_active_' + surfConditions.experience.Pro)
 								li.board-wall__till-block
 								li.board-wall__till-block
 								li.board-wall__till-block
@@ -117,5 +117,5 @@
 								td= Dimensions.Thickness[x]
 								td= Dimensions.Volume[x]
 	.board-wall__price-section
-		span.board-wall__price= `$${price}`
+		span.board-wall__price= '$' + price
 		a(href="#" data-productid= _id).board-wall__buy-btn.js-id buy now
