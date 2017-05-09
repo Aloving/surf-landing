@@ -13,7 +13,7 @@ let lifeCycle = {
 	createItem: 'createItem',
 	addIntoCache: 'addIntoCache',
 	publishDOMelement: 'publishDOMelement'
-}
+};
 
 /*
 	init casche
@@ -23,31 +23,29 @@ let lifeCycle = {
 	@createItem if cache doesn't have any
 */
 let cacheStorage = facade.cacheStorage(
-		 	mediator.publish.bind(undefined, lifeCycle.publishDOMelement),
-		 	mediator.publish.bind(undefined, lifeCycle.createItem)
-		 )();
+			mediator.publish.bind(undefined, lifeCycle.publishDOMelement),
+			mediator.publish.bind(undefined, lifeCycle.createItem)
+		)();
 
 
 	/*
 		subribers on @needItem
 	*/
-	mediator.subscribe(lifeCycle.needItem,
-		 cacheStorage.gettingItem
-	 );
+mediator.subscribe(lifeCycle.needItem, cacheStorage.gettingItem);
 
 	/*
 		subribers on @createItem
 	*/
 
-	mediator.subscribe(lifeCycle.createItem, facade.createItem(
-		mediator.publish.bind(undefined, lifeCycle.publishDOMelement)
-	));
+mediator.subscribe(lifeCycle.createItem, facade.createItem(
+	mediator.publish.bind(undefined, lifeCycle.publishDOMelement)
+));
 
 
 		/*
 		subscribe on @publishDOMelement
 	*/
-	mediator.subscribe(lifeCycle.publishDOMelement, cacheStorage.addItem);
+mediator.subscribe(lifeCycle.publishDOMelement, cacheStorage.addItem);
 
 export function implementItem(publishItem){
 	//subsctibe on ready element and pull him out
@@ -57,5 +55,5 @@ export function implementItem(publishItem){
 
 		//notice module that need item
 		mediator.publish(lifeCycle.needItem, id);
-	}
+	};
 }

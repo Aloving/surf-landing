@@ -1,5 +1,5 @@
 export function addErrorMessageInToModule(){
-	let buyModuleError = document.createElement("div");
+	let buyModuleError = document.createElement('div');
 	let errorMessage = document.createElement('p');
 
 	errorMessage.innerText = 'A technical error';

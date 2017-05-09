@@ -1,5 +1,5 @@
 /*
-	import depencies
+import depencies
 */
 import 'babelify-es6-polyfill';
 import 'whatwg-fetch';
@@ -22,7 +22,7 @@ let lifeCycle = {
 	gettingIds: 'gettingIds',
 	needItem: 'needItem',
 	implementedItem: 'implementedItem'
-}
+};
 
 // initialize buy module
 try{
@@ -100,5 +100,5 @@ try{
 	mediator.publish(lifeCycle.gettingIdsUrl, buyModuleFacade.gettingUrlForGettingIds());
 }catch(err){
 	buyModuleFacade.addErrorMessageInToModule();
-	console.error(err);
-};
+	throw err;
+}

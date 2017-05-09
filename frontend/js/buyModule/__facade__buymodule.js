@@ -12,9 +12,6 @@ export let buyModuleFacade = (function(){
 	return {
 		gettingUrlForGettingIds: gettingUrlForGettingIds,
 		getBoardIds: getBoardIds,
-		_logging: function(arg1){
-			console.log(arg1);
-		},
 		implementItem: implementItem,
 		paintFirstSlide: paintFirstSlide,
 		toggleSpinner: toggleSpinner,
@@ -22,5 +19,5 @@ export let buyModuleFacade = (function(){
 		clearDOMcontainer: clearDOMcontainer,
 		initNavigation: initNavigation,
 		addErrorMessageInToModule: addErrorMessageInToModule
-	}
+	};
 })();

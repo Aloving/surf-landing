@@ -28,7 +28,7 @@ export function galleryActions(element){
 			setTimeout(function(){
 				mainImage.setAttribute('src', linkToMainImg);
 				mainImage.classList.remove('board-wall__opacity-state');
-			},300)
+			},300);
 
 		});
 

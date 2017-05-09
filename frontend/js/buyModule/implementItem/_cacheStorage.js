@@ -1,6 +1,6 @@
 export function cacheStorage(publishCacheItem, createItem){
 
-	return function(id){		
+	return function(){		
 
 		let localCache = {
 		};
@@ -17,8 +17,8 @@ export function cacheStorage(publishCacheItem, createItem){
 		return{
 			gettingItem: gettingItem,
 			addItem: addItem
-		}
+		};
 
-	}
+	};
 
 }

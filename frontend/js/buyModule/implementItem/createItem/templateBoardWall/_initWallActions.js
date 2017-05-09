@@ -6,5 +6,5 @@ export function initWallActions(publishcb){
 		let elementWithTabs = tabsActions(element);
 		let createdElement = galleryActions(elementWithTabs);
 		publishcb(createdElement);
-	}
+	};
 }

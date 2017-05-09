@@ -1,4 +1,4 @@
-import { tabSliderElementPosition } from '../modules/tabSliderElementPosition'
+import { tabSliderElementPosition } from '../modules/tabSliderElementPosition';
 
 export function addIntoDOM(item){
 	let boardContainer = document.querySelector('.js-board-content');
@@ -6,8 +6,8 @@ export function addIntoDOM(item){
 	let boardWall = boardContainer.querySelector('.board-wall');
 	
 	if(boardWall){
-			boardContainer.innerHTML = '';
-			boardContainer.appendChild(item);
+		boardContainer.innerHTML = '';
+		boardContainer.appendChild(item);
 		setTimeout(() => {
 			item.classList.remove('board-wall_hidden');
 			tabSliderElementPosition(item, activeTabOfElement);

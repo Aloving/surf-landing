@@ -19,6 +19,10 @@
 			opacity: 0;
 		}
 	}
+
+	&__about{
+		@include section-heading(12.65rem)
+	}
 }
 
 %blue-main-btn{

@@ -3,8 +3,8 @@ export function getBoardIds(cb, errcb, publishEvent){
 		fetch(url,{
 			method: 'post',
 			headers: {
-    		'Content-Type': 'application/json'
-  		}
+				'Content-Type': 'application/json'
+			}
 		})
 		.then(response => response.json())
 		.then(data => {
@@ -13,6 +13,6 @@ export function getBoardIds(cb, errcb, publishEvent){
 		.catch(err => {
 			errcb();
 			throw err;
-		})	
-	}
+		});
+	};
 }

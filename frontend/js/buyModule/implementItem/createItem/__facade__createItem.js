@@ -10,5 +10,5 @@ export let facade = (function(){
 		templateModule: templateModule,
 		createDOMelement: createDOMelement,
 		initWallActions: initWallActions
-	}
+	};
 })();

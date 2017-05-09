@@ -1,0 +1,25 @@
+.about-section{
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	margin: {
+		top: 295px;
+		left: auto;
+		right: auto;
+		bottom: 0px;
+	}
+
+	&__header{
+		z-index: -1;
+		position: absolute;
+		top: -163px;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__back-image{
+		width: 100%;
+	}
+}

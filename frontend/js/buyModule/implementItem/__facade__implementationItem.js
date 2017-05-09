@@ -6,5 +6,5 @@ export let facade = (function(){
 	return {
 		cacheStorage: cacheStorage,
 		createItem: createItem
-	}
+	};
 })();

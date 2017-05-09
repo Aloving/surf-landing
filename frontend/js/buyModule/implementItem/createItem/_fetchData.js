@@ -3,8 +3,8 @@ export function fetchData(publishcb){
 		fetch(`/getboard/${id}`, {
 			method: 'post',
 			headers: {
-    		'Content-Type': 'application/json'
-  		}
+				'Content-Type': 'application/json'
+			}
 		})
 		.then(data => data.json())
 		.then(data => {
@@ -12,6 +12,6 @@ export function fetchData(publishcb){
 		})
 		.catch((err) => {
 			throw err;
-		})
-	}
+		});
+	};
 }

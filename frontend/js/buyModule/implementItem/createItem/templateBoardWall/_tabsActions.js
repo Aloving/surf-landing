@@ -25,7 +25,7 @@ export function tabsActions(element){
 
 			//remove active class for tab containers
 			Array.prototype.forEach.call(tabContainers, item => {
-				item.classList.remove('board-wall__tab-container_active')
+				item.classList.remove('board-wall__tab-container_active');
 			});
 
 			//container that should be active

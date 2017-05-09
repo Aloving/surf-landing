@@ -21,5 +21,5 @@ export function initNavigation(publishcb){
 			counterPosition(currentPosition);
 			publishcb(ids[currentPosition]);
 		});
-	}
+	};
 }

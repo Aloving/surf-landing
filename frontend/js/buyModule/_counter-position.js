@@ -6,9 +6,9 @@ export function counterPosition(position){
 }
 
 function formatNumber(num){
- if(!(String(num).length >= 2)){
+	if(!(String(num).length >= 2)){
 		return '0' + num;
- }else{
+	}else{
 		return String(num);
 	}
 }

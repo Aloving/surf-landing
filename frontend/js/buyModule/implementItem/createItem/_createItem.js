@@ -14,7 +14,7 @@ let lifeCycle = {
 	createDOMelement: 'createDOMelement',
 	initWallActions: 'initWallActions',
 	createdElement: 'createdElement'
-}
+};
 
 /*
 	subscribers on @needData	
@@ -55,5 +55,5 @@ export function createItem(publishcb){
 		setTimeout(() => {
 			mediator.publish(lifeCycle.needData, id);
 		}, 500);
-	}
+	};
 }
