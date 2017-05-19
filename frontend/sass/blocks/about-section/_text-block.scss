@@ -1,14 +1,16 @@
 .about-text-block{
 	position: absolute;
-	left: 436px;
-	bottom: -123px;
+	left: 20%;
+	top: 123px;
 	z-index: 2;
-	width: 488px;
-	padding: {
-		right: 65px;
-		top: 67px;
-	}
+	min-height: 82%;
+	width: 26%;
 	background: #ffffff;
+	padding: {
+		right: 5%;
+		left: 16px;
+		top: 5%;
+	}
 	&:before{
 		content: '';
 		display: block;
@@ -50,8 +52,11 @@
 
 	&__short-description{
 		text-align: left;
-		margin-top: 56px;
+		margin-top: 43px;
+		overflow: hidden;
+		max-height: 346px;
 		p{
+			display: block; 
 			margin: 0px;
 			color: $black;
 			line-height: 2.375rem;

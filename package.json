@@ -1,0 +1,30 @@
+{
+  "name": "surf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-resolve": "^1.11.2",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "scripts": {
+    "start": "concurrently \"node index.js\" \"cd ./frontend/ gulp\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aloving/surf-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aloving/surf-landing/issues"
+  },
+  "homepage": "https://github.com/Aloving/surf-landing#readme"
+}
