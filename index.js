@@ -1,20 +1,23 @@
 let express = require('express');
 let app 		= express();
-let boardsData 		= require('./data')
-let resolve = require('browser-resolve');
+let boardsData 		= require('./data');
 
 let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')
-}
+};
 
 let boardIdsUrl = '/getboardids';
+let videoUrl = '/getvideocontent';
 
 let data = (function(data){
 	let information = {};
 
 	information.counts = data.boards.length;
 	information.pugModules = pugModules;
-	information.boardIdsUrl = boardIdsUrl;
+	information.urls = {
+		boardIdsUrl: boardIdsUrl,
+		videoUrl: videoUrl
+	};
 
 	return information;
 })(boardsData);
@@ -26,8 +29,8 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {         
-  console.log('%s %s', req.method, req.url);
-  next();
+	console.log('%s %s', req.method, req.url);
+	next();
 });
 
 app.get('/', (req,res) => {
@@ -41,10 +44,15 @@ app.post('/getboard/:id', (req,res) => {
 	res.send(itemJson);
 });
 
+app.get(videoUrl, (req, res, next) => {
+	let content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/b6hoBp7Hk-A" frameborder="0" allowfullscreen></iframe>';
+	res.send(content);
+});
+
 app.post(boardIdsUrl, (req,res) => {
 	res.send(boardsIds);
 });
 
 app.listen(8000, () => {
-  console.log('Listening on port 8000')
+  console.log('Listening on port 8000');
 });

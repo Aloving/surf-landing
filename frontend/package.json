@@ -62,6 +62,7 @@
     "baron": "^2.2.9",
     "browser-resolve": "^1.11.2",
     "rxjs": "^5.3.1",
+    "simple-modal-es6": "0.0.9",
     "whatwg-fetch": "^2.0.3",
     "zepto": "^1.2.0"
   },

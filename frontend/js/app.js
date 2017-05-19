@@ -9,6 +9,10 @@ import 'whatwg-fetch';
 */
 import { mediator } from './app-mediator';
 import { buyModuleFacade } from './buyModule/__facade__buymodule';
+import { modalsFacade } from './modals/__facade__modalsActions';
+import { gettingUrl } from './modules/gettingUrl';
+
+let _gettingUrl = gettingUrl(setUrls);
 
 /*
 	@gettingIdsUrl 				= get url from 'body - tag' for getting ids of goods
@@ -17,12 +21,50 @@ import { buyModuleFacade } from './buyModule/__facade__buymodule';
 	@implementedItem 			= realization of item
 */
 
-let lifeCycle = {
+let urls;
+
+let buyModuleLifeCycle = {
 	gettingIdsUrl: 'gettingIdsUrl',
 	gettingIds: 'gettingIds',
 	needItem: 'needItem',
 	implementedItem: 'implementedItem'
 };
+
+let modalsLifeCycle = {
+	callModal: 'callmodal',
+	getModalUrl: 'getModalUrl',
+	getModalContent: 'getModalContent'
+};
+
+let aboutVideoElement = document.getElementById('js-about-video');
+
+aboutVideoElement.addEventListener('click', (e) => {
+	e.preventDefault();
+	mediator.publish(modalsLifeCycle.callModal);
+});
+
+try{
+	mediator.subscribe(modalsLifeCycle.callModal, 
+		mediator.publish.bind(undefined, modalsLifeCycle.getModalUrl, _gettingUrl(urls,'videoUrl'))
+	);
+
+	mediator.subscribe(modalsLifeCycle.getModalUrl, 
+		modalsFacade.getHtmlContent(
+			mediator.publish.bind(undefined, modalsLifeCycle.getModalContent)
+		)
+		//todo add error action
+	);
+
+	mediator.subscribe(modalsLifeCycle.getModalContent, function(arg1){
+		console.log(arg1);
+	});
+
+} catch(err) {
+	throw err;
+}
+
+
+
 
 // initialize buy module
 try{
@@ -31,11 +73,10 @@ try{
 		subscribers on @gettingIdsUrl	
 	*/
 	mediator.subscribe(
-		lifeCycle.gettingIdsUrl,
+		buyModuleLifeCycle.gettingIdsUrl,
 		buyModuleFacade.getBoardIds(
-			mediator.publish,
-			buyModuleFacade.addErrorMessageInToModule,
-			lifeCycle.gettingIds
+			mediator.publish.bind(undefined, buyModuleLifeCycle.gettingIds),
+			buyModuleFacade.addErrorMessageInToModule
 		)
 	);
 
@@ -44,16 +85,16 @@ try{
 	*/
 
 	mediator.subscribe(
-		lifeCycle.gettingIds,
+		buyModuleLifeCycle.gettingIds,
 		buyModuleFacade.initNavigation(
-			mediator.publish.bind(undefined, lifeCycle.needItem)
+			mediator.publish.bind(undefined, buyModuleLifeCycle.needItem)
 		)
 	);
 
 	mediator.subscribe(
-		lifeCycle.gettingIds,
+		buyModuleLifeCycle.gettingIds,
 		buyModuleFacade.paintFirstSlide(
-			mediator.publish.bind(undefined, lifeCycle.needItem)
+			mediator.publish.bind(undefined, buyModuleLifeCycle.needItem)
 		)
 	);
 
@@ -62,19 +103,19 @@ try{
 	*/
 
 	mediator.subscribe(
-		lifeCycle.needItem,
+		buyModuleLifeCycle.needItem,
 		buyModuleFacade.clearDOMcontainer
 	);	
 
 	mediator.subscribe(
-		lifeCycle.needItem,
+		buyModuleLifeCycle.needItem,
 		buyModuleFacade.toggleSpinner.bind(undefined, true)
 	);
 
 	mediator.subscribe(
-		lifeCycle.needItem,
+		buyModuleLifeCycle.needItem,
 		buyModuleFacade.implementItem(
-			mediator.publish.bind(undefined, lifeCycle.implementedItem)
+			mediator.publish.bind(undefined, buyModuleLifeCycle.implementedItem)
 		)
 	);
 
@@ -84,12 +125,12 @@ try{
 	*/
 
 	mediator.subscribe(
-		lifeCycle.implementedItem,
+		buyModuleLifeCycle.implementedItem,
 		buyModuleFacade.toggleSpinner.bind(undefined, false)
 	);
 
 	mediator.subscribe(
-		lifeCycle.implementedItem, buyModuleFacade.addIntoDOM
+		buyModuleLifeCycle.implementedItem, buyModuleFacade.addIntoDOM
 	);
 
 
@@ -97,8 +138,16 @@ try{
 							publishers
 		 ==============================
 	 */
-	mediator.publish(lifeCycle.gettingIdsUrl, buyModuleFacade.gettingUrlForGettingIds());
+	mediator.publish(
+		buyModuleLifeCycle.gettingIdsUrl,
+		_gettingUrl(urls, 'boardIdsUrl')
+	);
 }catch(err){
 	buyModuleFacade.addErrorMessageInToModule();
 	throw err;
 }
+
+function setUrls(gettedUrls){
+	urls = gettedUrls;
+}
+
