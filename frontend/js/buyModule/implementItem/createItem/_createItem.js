@@ -13,7 +13,11 @@ let lifeCycle = {
 	templateItem: 'templateItem',
 	createDOMelement: 'createDOMelement',
 	initWallActions: 'initWallActions',
-	createdElement: 'createdElement'
+	createdElement: 'createdElement',
+	publishView: 'publishView'
+};
+
+let objectViews = {
 };
 
 /*
@@ -26,6 +30,11 @@ mediator.subscribe(lifeCycle.needData, facade.fetchData(
 /*
 	subscribers on @templateItem	
 */
+mediator.subscribe(lifeCycle.templateItem, function(json){
+	objectViews.jsonView = json;
+	objectViews.id = json._id;
+	objectViews.category = 'boards';
+});
 mediator.subscribe(lifeCycle.templateItem, facade.templateModule(
 	mediator.publish.bind(undefined, lifeCycle.createDOMelement)
 ));
@@ -46,14 +55,23 @@ mediator.subscribe(lifeCycle.initWallActions, facade.initWallActions(
 	mediator.publish.bind(undefined, lifeCycle.createdElement)
 ));
 
+/*
+	subscribers on @createdElement	
+*/
+mediator.subscribe(lifeCycle.createdElement, function(domElement){
+	objectViews.DOMelement = domElement;
+	mediator.publish(lifeCycle.publishView, objectViews);
+});
+
 export function createItem(publishcb){
-	/*
-		subscribers on @createdElement	
-	*/
-	mediator.subscribe(lifeCycle.createdElement, publishcb);
-	return function(id){
+	mediator.subscribe(lifeCycle.publishView, publishcb);
+	return function(ext){
 		setTimeout(() => {
-			mediator.publish(lifeCycle.needData, id);
+			if(ext.jsonView){
+				mediator.publish(lifeCycle.templateItem, ext.jsonView);
+			}else{
+				mediator.publish(lifeCycle.needData, ext);
+			}
 		}, 500);
 	};
 }

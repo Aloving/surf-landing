@@ -7,9 +7,7 @@ export function getBoardIds(cb, errcb){
 			}
 		})
 		.then(response => response.json())
-		.then(data => {
-			cb(data);
-		})
+		.then(cb)
 		.catch(err => {
 			errcb();
 			throw err;

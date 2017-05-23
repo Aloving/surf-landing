@@ -19,7 +19,4 @@ export function addIntoDOM(item){
 			tabSliderElementPosition(item, activeTabOfElement);
 		}, 10);
 	}
-
-
-
 }

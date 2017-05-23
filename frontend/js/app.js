@@ -32,31 +32,65 @@ let buyModuleLifeCycle = {
 
 let modalsLifeCycle = {
 	callModal: 'callmodal',
+	checkCache: 'checkCache',
+	exceptCacheStep: 'exceptCacheStep', 
 	getModalUrl: 'getModalUrl',
-	getModalContent: 'getModalContent'
+	getModalContent: 'getModalContent',
+	createModal: 'createModal',
+	needAggregationParams: 'needAggregationParams'
 };
-
-let aboutVideoElement = document.getElementById('js-about-video');
-
-aboutVideoElement.addEventListener('click', (e) => {
-	e.preventDefault();
-	mediator.publish(modalsLifeCycle.callModal);
-});
+let aggregationParams;
 
 try{
-	mediator.subscribe(modalsLifeCycle.callModal, 
-		mediator.publish.bind(undefined, modalsLifeCycle.getModalUrl, _gettingUrl(urls,'videoUrl'))
-	);
+	//callmodal 
 
-	mediator.subscribe(modalsLifeCycle.getModalUrl, 
+	// check cache first ( 1 )
+	/*
+		subscribers on @modalsLifeCycle.callModal	
+	*/
+	mediator.subscribe(modalsLifeCycle.callModal, function(ext){
+		modalsFacade.cacheStorage(
+			mediator.publish.bind(undefined, modalsLifeCycle.getModalContent),
+			mediator.publish.bind(undefined, modalsLifeCycle.exceptCacheStep)
+		).gettingItem(ext.category, ext.id);
+	});
+
+	mediator.subscribe(modalsLifeCycle.exceptCacheStep, function(params){
+		mediator.publish(modalsLifeCycle.getModalUrl, _gettingUrl(urls, params.id));
+	});
+
+	mediator.subscribe(modalsLifeCycle.exceptCacheStep, function(params){
+		aggregationParams = params;
+	});
+
+	mediator.subscribe(modalsLifeCycle.getModalUrl,
 		modalsFacade.getHtmlContent(
 			mediator.publish.bind(undefined, modalsLifeCycle.getModalContent)
 		)
 		//todo add error action
 	);
 
-	mediator.subscribe(modalsLifeCycle.getModalContent, function(arg1){
-		console.log(arg1);
+
+	/*
+		subscribers on @modalsLifeCycle.getModalContent	
+	*/
+	mediator.subscribe(modalsLifeCycle.getModalContent, function(modalContent){
+		modalsFacade.cacheStorage().addItem({
+			id: aggregationParams.id,
+			category: aggregationParams.category,
+			DOMelement: modalContent,
+			jsonView: null
+		});
+	});
+	/*
+		create modal with received content, step ( 5 )
+	*/
+	mediator.subscribe(modalsLifeCycle.getModalContent, function(modalView){
+		if(modalView.DOMelement){
+			modalsFacade.createModal(modalView.DOMelement);
+		}else{
+			modalsFacade.createModal(modalView);
+		}
 	});
 
 } catch(err) {
@@ -147,7 +181,19 @@ try{
 	throw err;
 }
 
+
+//helpers
 function setUrls(gettedUrls){
 	urls = gettedUrls;
 }
 
+
+//event listeners
+let aboutVideoElement = document.getElementById('js-about-video');
+aboutVideoElement.addEventListener('click', (e) => {
+	e.preventDefault();
+	mediator.publish(modalsLifeCycle.callModal, {
+		category: 'modal',
+		id: 'video'
+	});
+});
