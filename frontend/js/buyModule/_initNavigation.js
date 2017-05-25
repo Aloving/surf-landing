@@ -1,8 +1,8 @@
 import { counterPosition } from './_counter-position';
 
 export function initNavigation(publishcb){
-
 	return function(ids){
+
 		let forwardArrow = document.querySelector('.js-forward-arrow');
 		let backwardArrow = document.querySelector('.js-backward-arrow');
 		let currentPosition = 0;
@@ -21,5 +21,6 @@ export function initNavigation(publishcb){
 			counterPosition(currentPosition);
 			publishcb(ids[currentPosition]);
 		});
+		
 	};
 }

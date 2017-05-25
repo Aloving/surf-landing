@@ -1,15 +1,17 @@
-import { getBoardIds } from './_getids';
+import { initIds } from './_initIds';
+import { fetchIds } from './_fetchIds';
 import { addErrorMessageInToModule } from './_addErrorMessageInToModule';
 import { initNavigation } from './_initNavigation';
 import { paintFirstSlide } from './_paintFirstSlide';
-import { implementItem } from './implementItem/implementItem';
+import { implementDOMelement } from './implementDOMelement/implementDOMelement';
 import { toggleSpinner } from './_toggleSpinner';
 import { addIntoDOM } from './_addIntoDOM';
 import { clearDOMcontainer } from './_clearDOMcontainer';
 
 export let buyModuleFacade = {
-	getBoardIds: getBoardIds,
-	implementItem: implementItem,
+	initIds: initIds,
+	fetchIds: fetchIds,
+	implementDOMelement: implementDOMelement,
 	paintFirstSlide: paintFirstSlide,
 	toggleSpinner: toggleSpinner,
 	addIntoDOM: addIntoDOM,

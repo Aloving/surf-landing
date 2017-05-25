@@ -7,7 +7,7 @@ let pugModules = {
 };
 
 let boardIdsUrl = '/getboardids';
-let video = '/getvideocontent';
+let aboutVideo = '/getvideocontent';
 
 let data = (function(data){
 	let information = {};
@@ -15,8 +15,8 @@ let data = (function(data){
 	information.counts = data.boards.length;
 	information.pugModules = pugModules;
 	information.urls = {
-		boardIdsUrl: boardIdsUrl,
-		video: video
+		boardsIds: boardIdsUrl,
+		aboutVideo: aboutVideo
 	};
 
 	return information;
@@ -41,10 +41,10 @@ app.post('/getboard/:id', (req,res) => {
 	let itemId = req.params.id;
 	let itemJson = boardsData.boards.filter(item => item._id == itemId)[0];
 
-	res.send(itemJson);
+	setTimeout(() => {res.send(itemJson)}, 500);
 });
 
-app.get(video, (req, res, next) => {
+app.get(aboutVideo, (req, res, next) => {
 	let content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/b6hoBp7Hk-A" frameborder="0" allowfullscreen></iframe>';
 	res.send(content);
 });

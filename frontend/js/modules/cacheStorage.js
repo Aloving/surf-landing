@@ -1,44 +1,72 @@
-let localCache = {
+let _DOMcache = {
 };
 
-export function cacheStorage(publishCacheItem, createItem){		
+/*
+		3 conditions: 
+			1: publishDOMElement - if need DOM element from cache;
+			2: publishLSelement - if need JSON element from cache;
+			3: publishCreate - publish that need create from scratch;
+*/
+export function cacheStorage(actions){
+
+	// return item or false
 	function gettingItem(category, id){
-		let localStorageItem = localStorage.getItem(category) && JSON.parse(localStorage.getItem(category))[id];
-		if(localCache[category] && localCache[category][id]){
-			publishCacheItem(localCache[category][id]);
-		}else if(localStorageItem){
-			createItem({jsonView: localStorageItem});
-		}else{
-			createItem({id,category});
+
+		let DOMelement = getFromDOMCache(category,id);
+		var JSONelement;
+
+		if(DOMelement) return actions.publishDOMElement(DOMelement);
+
+		JSONelement = getFromLocalStorage(category,id);
+		if(JSONelement) return actions.publishLSelement(JSONelement);
+
+		actions.publishCreate({category, id});
+	}
+
+	function getFromDOMCache(category, id){
+
+		if(!_DOMcache[category]){
+			return false;
+		}else if(_DOMcache[category] && _DOMcache[category][id]){
+			return _DOMcache[category] && _DOMcache[category][id];
 		}
 
 	}
 
-	function addItem(item){
-		let { category, id, jsonView, DOMelement } = item;
-		let localStorageCat = localStorage.getItem(category) ? JSON.parse(localStorage.getItem(category)) : {};
+	function getFromLocalStorage(category, id){
 
-		if(!localCache[category]){
-			localCache[category] = {};
-		}
+		let jsonCategory = localStorage.getItem(category) && JSON.parse(localStorage.getItem(category));
 
-		if(!localCache[category][id]){
-			localCache[category][id] = {};
-		}else{
+		if(!jsonCategory){
 			return false;
+		}else{
+			return jsonCategory[id] || false;
 		}
 
-		localCache[category][id]['DOMelement'] = DOMelement;
+	}
 
-		if(jsonView){
-			localStorageCat[id] = jsonView;
-			localStorage.setItem(category, JSON.stringify(localStorageCat));	
+	function setIntoLocalStorage(category, id, item){
+
+		let lsCat = localStorage.getItem(category) ? JSON.parse(localStorage.getItem(category)) : {};
+
+		lsCat[id] = item;
+		localStorage.setItem(category, JSON.stringify(lsCat));
+
+	}
+
+	function setIntoLocalCache(category, id, item){
+		if(_DOMcache[category]){
+			_DOMcache[category][id] = item;
+		}else{
+			_DOMcache[category] = {};
+			_DOMcache[category][id] = item;
 		}
 	}
 	
 	return{
 		gettingItem: gettingItem,
-		addItem: addItem
+		setIntoLocalStorage: setIntoLocalStorage,
+		setIntoLocalCache: setIntoLocalCache
 	};
 
 }

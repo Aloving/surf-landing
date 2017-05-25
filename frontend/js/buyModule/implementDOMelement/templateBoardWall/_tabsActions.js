@@ -1,4 +1,4 @@
-import { tabSliderElementPosition } from '../../../../modules/tabSliderElementPosition';
+import { tabSliderElementPosition } from '../../../modules/tabSliderElementPosition';
 
 export function tabsActions(element){
 	
