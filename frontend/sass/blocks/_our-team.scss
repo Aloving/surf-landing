@@ -26,26 +26,9 @@ $slide-shadows: 0px 0px 20px 3px rgba(0,0,0,0.1);
 	}
 
 	&__slide{
-		display: inline-block;
-		position: relative;
-		display: inline-block;
-		height: 260px;
-		background: #fff;
-		box-shadow: $slide-shadows;
-		font-size: 1rem;
-		color: #000;
-		text-align: center;
-		width: 245px;
-		padding: 20px;
-		transition: background .1s;
-		cursor: pointer;
-		border-radius: 5px;
-		&:hover{
-			background: $main-blue;
-		}
 
 		&:nth-child(2n){
-			top: 25px;
+			top: 32px;
 			z-index: 2;
 		}
 
@@ -86,4 +69,113 @@ $slide-shadows: 0px 0px 20px 3px rgba(0,0,0,0.1);
 	&__left{
 		left: 0px;
 	}
+}
+
+.teammate-slide{
+	$gb1: &;
+	vertical-align: top;
+	$gray-text: #8c8c8c;
+	display: inline-block;
+	position: relative;
+	display: inline-block;
+	height: 260px;
+	background: #fff;
+	box-shadow: $slide-shadows;
+	font-size: 1rem;
+	color: #000;
+	text-align: center;
+	width: 245px;
+	padding: 20px;
+	transition: background .1s;
+	cursor: pointer;
+	border-radius: 5px;
+	&:hover{
+		$hover-light-blue: #b3e7ff;
+		background: $main-blue;
+		#{$gb1}{
+
+			&__name{
+				color: #fff;
+			}
+
+			&__mail{
+				color: $hover-light-blue;
+			}
+
+			&__place{
+				color: $hover-light-blue;
+			}
+
+			&__placeholder-svg{
+				svg{
+					fill: $hover-light-blue;
+				}
+			}
+
+			&__sea-svg{
+				svg{
+					fill: #0022ff;
+				}
+			}
+
+		}
+	}
+	&__image{
+		$size: 102px;
+		border: 2px solid #fff;
+		margin-top: 10px;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+	}
+
+	&__name{
+		padding: 10px 0px;
+		color: $main-blue;
+		font-size: 1.175rem;
+		margin: 11px 0px 0px;
+		transition: .2s;
+	}
+
+	&__place{
+		display: inline;
+		font: {
+			size: 0.875rem;
+			family: 'Raleway';
+		}
+		transition: color .2s;
+		color: $gray-text;
+	}
+
+	&__mail{
+		margin: 0;
+		padding: 10px 0px;
+		color: $gray-text;
+		transition: color .2s;
+		font: {
+			size: 0.875rem;
+			family: 'Raleway';
+		}
+	}
+
+	&__sea-svg{
+		display: block;
+		margin-top: -9px;
+		svg{
+			transition: .2s;
+			width: 31px;
+			height: 31px;
+			fill: #646464;
+		}
+	}
+
+	&__placeholder-svg{
+		svg{
+			transition: .2s;
+			width: 13px;
+			height: 13px;
+			fill: #d9d9d9;
+		}
+	}
+
 }
