@@ -23,6 +23,10 @@
 	&__about{
 		@include section-heading(12.65rem)
 	}
+
+	&__our-team{
+		@include section-heading(11.875rem);
+	}
 }
 
 %blue-main-btn{
@@ -36,4 +40,8 @@
 		size: 0.875rem;
 	} 
 	background: $main-blue;
+}
+
+.overflow-hidden{
+	overflow: hidden;
 }

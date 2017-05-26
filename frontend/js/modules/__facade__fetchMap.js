@@ -39,10 +39,13 @@ function _fetchBoard(cb, errcb){
 }
 
 export function _getModalContent(publishcb, errcb){
-	return function(url){
+	return function(url, list){
 		fetch(url, {method: 'GET'})
 			.then(data => data.text())
-			.then(publishcb)
+			.then(data => {
+				publishcb(data, list);
+				cacheStorage().setIntoLocalStorage(list.category, list.id, data);
+			})
 			.catch(errcb);
 	};
 }

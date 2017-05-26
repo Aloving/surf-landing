@@ -25,6 +25,7 @@ $play-button-border: 140px;
 			border: solid 2px #ffffff;
 			opacity: 0.3;
 			border-radius: 50%;
+			transition: 1s;
 			position: absolute;
 			transform: scale(1);
 			width: #{$svg-size + 1rem};
@@ -48,10 +49,14 @@ $play-button-border: 140px;
 
 @keyframes mymove {
 	0%{
+		opacity: 0;
 		transform: scale(1);
 	}
-  50%{
+	70%{
 		opacity: 1;
+	}
+  100%{
+		opacity: 0;
   	transform: scale(1.25);
   }
 }

@@ -12,8 +12,11 @@ export function CreateModal(innerContent){
 	modalContainer.appendChild(modalContentContainer);
 
 	modalContainer.addEventListener('click', function(){
+		body.classList.remove('overflow-hidden');
 		body.removeChild(this);
 	});
+
+	body.classList.add('overflow-hidden');
 
 	body.appendChild(modalContainer);
 }	

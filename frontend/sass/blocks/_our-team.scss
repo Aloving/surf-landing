@@ -1,0 +1,89 @@
+$slide-shadows: 0px 0px 20px 3px rgba(0,0,0,0.1);
+
+.our-team{
+	position: relative;
+	&__header{
+		position: relative;
+		top: 131px;
+		left: 0px;
+		text-align: center;
+	}
+}
+
+.slider {
+	position: relative;
+	$gb1: &;
+	@extend %wrapper;
+	&__content{
+		width: 982px;
+		position: relative;
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		margin: 0 auto;
+		padding: 55px 0px;
+	}
+
+	&__slide{
+		display: inline-block;
+		position: relative;
+		display: inline-block;
+		height: 260px;
+		background: #fff;
+		box-shadow: $slide-shadows;
+		font-size: 1rem;
+		color: #000;
+		text-align: center;
+		width: 245px;
+		padding: 20px;
+		transition: background .1s;
+		cursor: pointer;
+		border-radius: 5px;
+		&:hover{
+			background: $main-blue;
+		}
+
+		&:nth-child(2n){
+			top: 25px;
+			z-index: 2;
+		}
+
+		&:nth-child(odd){
+			z-index: 1;
+		}
+	}
+
+	&__next,
+	&__prev{
+		position: absolute;
+		top: 50%;
+		display: table;
+		margin-top: -25px;
+		display: table;
+		cursor: pointer;
+		background: #fff;
+		box-shadow: $slide-shadows;
+		font-size: 0px;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		border-radius: 50%;
+		#{$gb1}__svg-element{
+			vertical-align: middle;
+			display: table-cell;
+		}
+		svg{
+			height: 25px;
+			width: 25px;
+		}
+	}
+
+	&__next{
+		right: 0px;
+	}
+
+	&__left{
+		left: 0px;
+	}
+}

@@ -18,7 +18,7 @@ export function cacheStorage(actions){
 		if(DOMelement) return actions.publishDOMElement(DOMelement);
 
 		JSONelement = getFromLocalStorage(category,id);
-		if(JSONelement) return actions.publishLSelement(JSONelement);
+		if(JSONelement) return actions.publishLSelement(JSONelement, {category, id});
 
 		actions.publishCreate({category, id});
 	}

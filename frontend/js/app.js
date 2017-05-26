@@ -8,9 +8,10 @@ import 'whatwg-fetch';
 	import main modules
 */
 import { mediator } from './app-mediator';
+import { implementModal } from './modals/_implementModal';
 import { appFacade } from './__facade__app';
 import { buyModuleFacade } from './buyModule/__facade__buymodule';
-import { modalsFacade } from './modals/__facade__modals';
+import { lory } from 'lory.js';
 
 export let _gettingUrl = appFacade.gettingUrl();
 
@@ -85,23 +86,35 @@ mediator.publish(buyModuleLifeCycle.initBuyModule);
 
 
 // modals
-let aboutVideoPreview = document.getElementById('js-about-video');
+var aboutVideoPreview = document.getElementById('js-about-video');
+var aboutReadMode = document.getElementById('js-about-more');
 
-mediator.subscribe(modalsLifeCycle.callModal, modalsFacade.implementModal(
-	mediator.publish.bind(undefined, modalsLifeCycle.readyModal)
-));
-
-mediator.subscribe(modalsLifeCycle.readyModal, function(modal){
-	console.log('output', modal);
-});
+mediator.subscribe(modalsLifeCycle.callModal, implementModal);
 
 aboutVideoPreview.addEventListener('click', evt => {
 
 	evt.preventDefault();
 	mediator.publish(modalsLifeCycle.callModal, {
 		category: 'modals',
-		id: 'aboutvideo'
+		id: 'aboutVideo'
 	});
 
 });
 
+aboutReadMode.addEventListener('click', evt => {
+
+	evt.preventDefault();
+	mediator.publish(modalsLifeCycle.callModal, {
+		category: 'modals',
+		id: 'aboutMore'
+	});
+
+});
+
+//carousel
+
+const slider = document.querySelector('.js_slider');
+
+lory(slider, {
+	infinite: 4
+});
