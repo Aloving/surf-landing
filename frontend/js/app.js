@@ -114,7 +114,21 @@ aboutReadMode.addEventListener('click', evt => {
 //carousel
 
 const slider = document.querySelector('.js_slider');
+var teammatesElements = document.getElementsByClassName('js-teammate');
 
 lory(slider, {
 	infinite: 4
+});
+
+Array.prototype.forEach.call(teammatesElements, item => {
+
+	item.addEventListener('click', function(){
+		let teammateId = this.getAttribute('data-slidekey');
+
+		mediator.publish(modalsLifeCycle.callModal, {
+			category: 'modals',
+			id: teammateId
+		});
+	});
+
 });

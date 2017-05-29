@@ -6,6 +6,6 @@ export function fetchIds(receivedIds, errorAction){
 		fetchMap.getBoardIds(
 			receivedIds,
 			errorAction
-		)(_gettingUrl('boardsIds'));
+		)(_gettingUrl('commons', 'boardsIds'));
 	};
 }

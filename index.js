@@ -1,6 +1,7 @@
 let express = require('express');
 let app 		= express();
-let boardsData 		= require('./data');
+let boardsData 		= require('./boardsData');
+let teammatesData = require('./teammatesData');
 
 let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')
@@ -10,15 +11,46 @@ let boardIdsUrl = '/getboardids';
 let aboutVideo = '/getvideocontent';
 let aboutMore = '/aboutmore';
 
+let tajburrow = '/teammate/tajburrow';
+let maliamanuel = '/teammate/maliamanuel';
+let macycallaghan = '/teammate/macycallaghan';
+let ianwalsh = '/teammate/ianwalsh';
+let susansmith = '/teammate/susansmith';
+let timjackson = '/teammate/timjackson';
+let mickgrey = '/teammate/mickgrey';
+let jennythompson = '/teammate/jennythompson';
+let miladunst = '/teammate/miladunst';
+let morganmitch = '/teammate/morganmitch';
+let sarahbrown = '/teammate/sarahbrown';
+let emmajenkins = '/teammate/emmajenkins';
+
+
 let data = (function(data){
 	let information = {};
 
 	information.counts = data.boards.length;
 	information.pugModules = pugModules;
 	information.urls = {
-		boardsIds: boardIdsUrl,
-		aboutVideo: aboutVideo,
-		aboutMore: aboutMore
+		commons: {
+			boardsIds: boardIdsUrl,
+		},
+		modals: {
+			aboutVideo: aboutVideo,
+			aboutMore: aboutMore,
+			tajburrow,
+			maliamanuel,
+			macycallaghan,
+			ianwalsh,
+			susansmith,
+			timjackson,
+			mickgrey,
+			jennythompson,
+			miladunst,
+			morganmitch,
+			sarahbrown,
+			emmajenkins
+		}
+		
 	};
 
 	return information;
@@ -54,6 +86,14 @@ app.get(aboutMore, (req, res, next) => {
 app.get(aboutVideo, (req, res, next) => {
 	let content = '<iframe width="671" height="356" src="https://www.youtube.com/embed/b6hoBp7Hk-A" frameborder="0" allowfullscreen></iframe>';
 	res.send(content);
+});
+
+app.get('/teammate/:id', (req, res) => {
+	let teammateId = req.params.id;
+	let itemJson = teammatesData.teammates.filter(item => item.id == teammateId)[0];
+
+	res.render('helpers/teammates-modal',itemJson);
+	
 });
 
 app.post(boardIdsUrl, (req,res) => {

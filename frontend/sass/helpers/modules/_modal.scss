@@ -25,11 +25,14 @@
 		background: #fff;
 		max-width: 671px;
 		text-align: left;
-		padding: 20px;
+		padding: 25px;
 		font-size: 0px;
 		p{
-			font-size: 0.875rem;
-			line-height: 1.250rem;
+			line-height: 1.650rem;
+			font:{
+				family: "Raleway";
+				size: 0.875rem;
+			}
 		}
 		&:after{
 			content: '';

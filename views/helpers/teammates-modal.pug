@@ -1,0 +1,26 @@
+.teammate-modal
+	.teammate-modal__image-element
+		img.teammate-modal__image(src= image)
+	.teammate-modal__information
+		.teammate-modal__basic
+			span.teammate-modal__name
+				span.teammate-modal__part-name= name.firstName
+					|&nbsp
+				span.teammate-modal__part-name= name.lastName
+			.teammate-modal__place
+				span.teammate-modal__placholder-icon.teammate-modal__svg-icon
+					svg
+						use(xlink:href="#placeholder")
+				span.teammate-modal__parts-of-places
+					span.teammate-modal__desc-string= place.city
+					span.teammate-modal__desc-string= place.country
+			.teammate-modal__mail
+				span.teammate-modal__arroba-icon.teammate-modal__svg-icon
+					svg
+						use(xlink:href="#arroba")
+				span.teammate-modal__desc-string= mail
+			.teammate-modal__svg-waves
+				svg
+					use(xlink:href="#sea")
+		.teammate-modal__description
+			p= description

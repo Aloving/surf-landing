@@ -1,0 +1,81 @@
+.teammate-modal{
+	&__basic{
+		padding-bottom: 35px;
+		position: relative;
+	}
+
+	&__image{
+		float: left;
+		border-radius: 50%;
+		width: 236px;
+		height: 236px;
+	}
+
+	&__name{
+		display: block;
+		padding: {
+			left: 306px;
+			bottom: 30px;
+		}
+	}
+
+	&__part-name{
+		font-size: 1.175rem;
+		color: $main-blue;
+	}
+
+	&__place{
+		display: block;
+		margin-bottom: 13px;
+	}
+
+	&__desc-string{
+		color: #8c8c8c;
+		display: inline-block;
+		vertical-align: middle;
+		font:{
+			size: 0.875rem;
+			family: 'Raleway';
+		}
+	}
+
+	&__image-element{
+		float: left;
+		box-sizing: content-box;
+		padding: 0px 45px 20px 0px;
+	}
+
+	&__description{
+		p{
+			font:{
+				size: 0.875rem;
+				family: 'Raleway';
+			}
+		}
+	}
+
+	&__svg-icon{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 13px;
+		svg{
+			width: 13px;
+			height: 13px;
+			fill: #d9d9d9;
+		}
+	}
+
+	&__svg-waves{
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		margin-left: 123px;
+		margin-top: 4px;
+		svg{
+			width: 35px;
+			height: 35px;
+			fill: #646464;
+		}
+	}
+
+}
