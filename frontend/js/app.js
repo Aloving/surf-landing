@@ -126,8 +126,24 @@ Array.prototype.forEach.call(teammatesElements, item => {
 		let teammateId = this.getAttribute('data-slidekey');
 
 		mediator.publish(modalsLifeCycle.callModal, {
-			category: 'modals',
+			category: 'teammates',
 			id: teammateId
+		});
+	});
+
+});
+
+//news 
+var news = document.getElementsByClassName('js-new');
+
+Array.prototype.forEach.call(news, item => {
+
+	item.addEventListener('click', function(){
+		let newId = this.getAttribute('data-newid');
+
+		mediator.publish(modalsLifeCycle.callModal, {
+			category: 'news',
+			id: newId
 		});
 	});
 

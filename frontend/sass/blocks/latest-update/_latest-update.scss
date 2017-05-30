@@ -1,0 +1,55 @@
+.latest-update{
+	@extend %wrapper;
+	margin-bottom: 215px;
+	&__header{
+		@extend %montserrat-header;
+	}
+	
+	&__news-container{
+		width: 870px;
+		text-align: center;
+		margin: 0 auto;
+		margin:{
+			top: 68px;
+			right: auto;
+			left: auto;
+			bottom: 0;
+		}
+	}
+
+	&__preview-image{
+		font-size: 0px;
+	}
+
+	&__new{
+		cursor: pointer;
+		display: inline-block;
+		width: 270px;
+		transition: .2s;
+		&:not(:last-child){
+			margin-right: 30px;
+		}
+		&:hover{
+			box-shadow: $slide-shadows;
+		}
+	}
+
+	&__short-desc{
+		text-align: left;
+		padding: {
+			top: 23px;
+			right: 25px;
+			left: 25px;
+			bottom: 20px;
+		}
+		p{
+			margin: 0;
+			color: #787878;
+			font:{
+				size: 1rem;
+				family: 'Raleway';
+			}
+			line-height: 1.500rem;
+		}
+	}
+}

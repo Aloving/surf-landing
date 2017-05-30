@@ -15,10 +15,10 @@ let _getFromCacheStorage = cacheStorage({
 	publishDOMElement: mediator.publish.bind(undefined, lifeCycle.publishDOMcontent),
 	publishLSelement: mediator.publish.bind(undefined, lifeCycle.templateInnerContent),
 	publishCreate: mediator.publish.bind(undefined, lifeCycle.createFromScratch)
-}).gettingItem.bind(undefined, 'modals');
+}).gettingItem.bind(undefined);
 
 mediator.subscribe(lifeCycle.startCycle, function(info){
-	_getFromCacheStorage(info.id);
+	_getFromCacheStorage(info.category, info.id);
 });
 
 mediator.subscribe(lifeCycle.publishDOMcontent, modalsFacade.createModal);

@@ -23,31 +23,7 @@
 	}
 
 	&__header{
-		position: relative;
-		p{
-			font: {
-				size: 1.125rem;
-				weigth: 600;
-			}
-			color: $black;
-			letter-spacing: 2.7px;
-			margin: 0;
-			text-transform: uppercase;
-		}
-
-		&:before{
-			content: 'x';
-			position: absolute;
-			bottom: -34px;
-			left: 0px;
-			width: 100%;
-			text-align: center;
-			color: $black;
-			font:{
-				size: 1.425rem;
-				weight: 600;
-			}
-		}
+		@extend %montserrat-header;
 	}
 
 	&__short-description{

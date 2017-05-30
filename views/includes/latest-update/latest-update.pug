@@ -1,0 +1,10 @@
+.latest-update
+	.latest-update__header
+		p Latest Updates
+	.latest-update__news-container
+		each val in news
+			.latest-update__new.js-new(data-newid= val._id)
+				.latest-update__preview-image
+					img(src= val.image, alt="")
+				.latest-update__short-desc
+					p= val.shortDesc

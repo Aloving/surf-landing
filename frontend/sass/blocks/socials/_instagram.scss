@@ -1,0 +1,62 @@
+.instagram{
+	max-width: 620px;
+	position: relative;
+	&__widget{
+		border: 0;
+		overflow: hidden;
+		position: relative;
+		width: 620px;
+		z-index: 2;
+	}
+
+	&__instagram{
+		position: relative;
+	}
+
+	&__insta-header{
+		position: absolute;
+		top: -74px;
+		left: -6px;
+		z-index: 1;
+	}
+
+	&__insta-footer{
+		display: block;
+		font-size: 0;
+		padding: 16px 22px 16px 22px;
+		span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&__svg-icon{
+		svg{
+			width: 29px;
+			height: 29px;
+			fill: $main-blue;
+		}
+	}
+
+	&__insta-FU{
+		padding-left: 21px;
+		text-transform: uppercase;
+		letter-spacing: -2.4px;
+		font:{
+			size: 1.500rem;
+			family: 'Roboto', 'Montserrat', 'Raleway';
+			weight: 700;
+		}
+		color: $main-blue;
+	}
+
+	&__insta-name{
+		padding-left: 22px;
+		font:{
+			size: 1rem;
+			family: 'Raleway';
+		}
+		color: $black;
+	}
+
+}
