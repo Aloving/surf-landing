@@ -1,23 +1,24 @@
 header.header
-	.header__menu.header__wrapper
-		.logo.header__logo
-			h1 Surfers Co.
-		nav.navigation.header__nav
-			a.navigation__link(href="#") Boards
-			a.navigation__link(href="#") About Us
-			a.navigation__link(href="#") Our Team
-			a.navigation__link(href="#") LATEST UPDATES
-			a.navigation__link(href="#") Socials
-		.header__socials.socials
-			a.socials__element(href="#")
-				svg.socials__svg
-					use(xlink:href="#facebook-logo-button")
-			a.socials__element(href="#") 
-				svg.socials__svg
-					use(xlink:href="#instagram-logo")
-			a.socials__element(href="#")
-				svg.socials__svg
-					use(xlink:href="#email")
+	.header__menu.js-header-menu
+		.header__wrapper
+			.logo.header__logo
+				h1 Surfers Co.
+			nav.navigation.header__nav
+				a.navigation__link.js-nav-link(href="#" data-sectionavname="boards") Boards
+				a.navigation__link.js-nav-link(href="#" data-sectionavname="about") About Us
+				a.navigation__link.js-nav-link(href="#" data-sectionavname="team") Our Team
+				a.navigation__link.js-nav-link(href="#" data-sectionavname="updates") LATEST UPDATES
+				a.navigation__link.js-nav-link(href="#" data-sectionavname="socials") Socials
+			.header__socials.socials
+				a.socials__element(href="#")
+					svg.socials__svg
+						use(xlink:href="#facebook-logo-button")
+				a.socials__element(href="#") 
+					svg.socials__svg
+						use(xlink:href="#instagram-logo")
+				a.socials__element(href="#")
+					svg.socials__svg
+						use(xlink:href="#email")
 	.header__tagline
 		.header__first-tagline
 			|Ride every wave as if it's your last

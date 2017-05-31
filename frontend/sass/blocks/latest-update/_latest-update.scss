@@ -1,7 +1,7 @@
 .latest-update{
 	@extend %wrapper;
 	margin-bottom: 208px;
-	&__header{
+	&__header h2{
 		@extend %montserrat-header;
 	}
 	
