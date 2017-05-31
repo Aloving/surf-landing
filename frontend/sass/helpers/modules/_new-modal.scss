@@ -1,0 +1,22 @@
+.new-modal{
+	p{
+		margin: 0;
+	}
+
+	&__image{
+		box-sizing: content-box;
+		padding: 0px 25px 25px 0px;
+		float: left;
+	}
+
+	&__date{
+		padding-bottom: 20px;
+		p{
+			color: $main-blue;
+			font: {
+				size: 1.175rem;
+				family: 'Raleway';
+			}
+		}
+	}
+}

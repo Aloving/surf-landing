@@ -1,5 +1,8 @@
 .new-modal
-	p= date
-	p= shortDesc
-	img(src= image)
-	p= fullDesc
+	.new-modal__image
+		img(src= image)
+	.new-modal__information
+		.new-modal__date
+			p= date
+		.new-modal__desc
+			p= fullDesc

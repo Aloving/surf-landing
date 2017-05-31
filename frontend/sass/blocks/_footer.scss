@@ -1,0 +1,25 @@
+@import 'footer/_copyright.scss';
+@import 'footer/_navigation.scss';
+@import 'footer/_subscribe.scss';
+
+.footer{
+	background: $black;
+	&__wrapper{
+		height: 420px;
+		@extend %wrapper;
+		padding: {
+			top: 43px;
+			bottom: 74px;
+		}
+	}
+
+	&__right-block{
+		float: right;
+	}
+
+	&__subscribe{
+		margin-left: -24px;
+		margin-top: 162px;
+	}
+
+}

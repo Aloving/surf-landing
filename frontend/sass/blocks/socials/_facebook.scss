@@ -1,0 +1,44 @@
+.facebook{
+	display: table;
+	height: 348px;
+	position: absolute;
+	width: 440px;
+	z-index: 1;
+	text-align: center;
+
+	&__widget{
+		display: table-cell!important;
+		vertical-align: middle;
+	}
+
+	&__logo{
+		$logo-width: 155px;
+		position: absolute;
+		left: calc(50% - #{$logo-width} / 2);
+		top: 15px;
+		img{
+			width: $logo-width;
+		}
+	}
+
+	&:after{
+		background: #385490;
+		content: '';
+		height: 50%;
+		left: 0px;
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		z-index: -1;
+	}
+	&:before{
+		background: #e5e5e5;
+		bottom: 0px;
+		content: '';
+		height: 50%;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+	}
+}

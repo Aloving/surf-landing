@@ -1,5 +1,21 @@
 @import 'socials/_instagram.scss';
+@import 'socials/_facebook.scss';
 
 .socials{
+	position: relative;
+	text-align: right;
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
 	@extend %wrapper;
+	&__facebook{
+		right: 45px;
+		top: 58px;
+	}
+
+	&__instagram{
+		margin-bottom: -230px;
+	}
 }

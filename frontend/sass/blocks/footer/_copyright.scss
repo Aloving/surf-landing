@@ -1,0 +1,13 @@
+.copyright{
+	margin-top: 202px;
+	display: inline-block;
+	&__copyright,
+	&__design-buy{
+		color: #4d4d4d;
+		font: {
+			size: 0.750rem;
+			family: 'Raleway';
+			weight: 700;
+		}
+	}
+}
