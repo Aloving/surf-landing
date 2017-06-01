@@ -4,8 +4,8 @@ let boardsData 		= require('./boardsData');
 let teammatesData = require('./teammatesData');
 let newsData = require('./newsData');
 let production = process.env.NODE_ENV == 'production';
+let port = production ? 60 : 8000;
 
-console.log(production);
 
 let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')
@@ -76,6 +76,6 @@ app.post(boardIdsUrl, (req,res) => {
 	res.send(boardsIds);
 });
 
-app.listen(8000, () => {
-  console.log('Listening on port 8000');
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
