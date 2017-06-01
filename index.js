@@ -3,6 +3,9 @@ let app 		= express();
 let boardsData 		= require('./boardsData');
 let teammatesData = require('./teammatesData');
 let newsData = require('./newsData');
+let production = process.env.NODE_ENV == 'production';
+
+console.log(production);
 
 let pugModules = {
 	formatNumber: require('./pugModules/formatNumber')

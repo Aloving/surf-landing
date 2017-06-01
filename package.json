@@ -15,7 +15,7 @@
     "eslint-plugin-import": "^2.2.0"
   },
   "scripts": {
-    "start": "concurrently \"node index.js\" \"cd ./frontend/ gulp\""
+    "production": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",

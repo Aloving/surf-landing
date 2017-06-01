@@ -6,7 +6,7 @@ module.exports = {
 				firstName: 'Taj',
 				lastName: 'Burrow'
 			},
-			image: './images/team/Photo_1_full.jpg',
+			image: './images/team/photo_1_full.jpg',
 			mail: 'tajamos',
 			place: {
 				city: 'Yallingup',
@@ -20,7 +20,7 @@ module.exports = {
 				firstName: 'Malia',
 				lastName: 'Manuel'
 			},
-			image: './images/team/Photo_2_full.jpg',
+			image: './images/team/photo_2_full.jpg',
 			mail: 'maliamanuel',
 			place: {
 				city: 'Yallingup',
@@ -34,7 +34,7 @@ module.exports = {
 				firstName: 'Susan',
 				lastName: 'Smith'	
 			},
-			image: './images/team/Photo_5_full.jpg',
+			image: './images/team/photo_5_full.jpg',
 			mail: 'susan.sm',
 			place: {
 				city: 'New York',
@@ -48,7 +48,7 @@ module.exports = {
 				firstName: 'Macy',
 				lastName: 'Callaghan'
 			},
-			image: './images/team/Photo_3_full.jpg',
+			image: './images/team/photo_3_full.jpg',
 			mail: 'macyjanecallaghan',
 			place: {
 				city: 'San Clemente',
@@ -67,7 +67,7 @@ module.exports = {
 				city: 'Maui',
 				country: 'Hi'
 			},
-			image: './images/team/Photo_4_full.jpg',
+			image: './images/team/photo_4_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -81,7 +81,7 @@ module.exports = {
 				city: 'Yallingup',
 				country: 'Australia'
 			},
-			image: './images/team/Photo_7_full.jpg',
+			image: './images/team/photo_7_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -95,7 +95,7 @@ module.exports = {
 				city: 'San Clemente',
 				country: 'CA'
 			},
-			image: './images/team/Photo_8_full.jpg',
+			image: './images/team/photo_8_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -109,7 +109,7 @@ module.exports = {
 				city: 'Maui',
 				country: 'Hi'
 			},
-			image: './images/team/Photo_9_full.jpg',
+			image: './images/team/photo_9_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -123,7 +123,7 @@ module.exports = {
 				city: 'Yallingup',
 				country: 'Australia'
 			},
-			image: './images/team/Photo_10_full.jpg',
+			image: './images/team/photo_10_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -137,7 +137,7 @@ module.exports = {
 				city: 'Canada',
 				country: 'Ottawa'
 			},
-			image: './images/team/Photo_11_full.jpg',
+			image: './images/team/photo_11_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -151,7 +151,7 @@ module.exports = {
 				city: 'New York',
 				country: 'USA'
 			},
-			image: './images/team/Photo_12_full.jpg',
+			image: './images/team/photo_12_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		},
 		{
@@ -165,7 +165,7 @@ module.exports = {
 				city: 'Canada',
 				country: 'Ottawa'
 			},
-			image: './images/team/Photo_6_full.jpg',
+			image: './images/team/photo_6_full.jpg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae quibusdam officiis libero quia ad, unde, assumenda totam soluta modi ullam cumque rem porro tempore ratione doloribus ab delectus optio. Excepturi voluptates mollitia soluta at obcaecati, magni, doloremque aperiam quisquam esse ipsa voluptas commodi quis nulla dolore atque cumque incidunt, similique porro veritatis dicta quo libero rem! Praesentium nobis, laudantium illum, quisquam quaerat accusantium odio tempora odit in eius error enim voluptates nesciunt perspiciatis debitis neque dolorem voluptatibus deleniti vitae ea optio? Delectus doloremque, provident magnam facere eligendi minus dignissimos a quae id ut distinctio, voluptates odit repudiandae! Deleniti distinctio eaque quod eos numquam sunt harum, laudantium labore maxime architecto! Tempore, et quis. Perspiciatis ipsam numquam similique ea libero explicabo dicta et delectus quae impedit, est, illum alias temporibus asperiores qui, velit voluptates maiores doloremque mollitia nobis dolore expedita non. Corrupti esse neque sequi laboriosam rem, magni ab itaque nam vel doloribus aliquid quaerat excepturi velit et ipsa explicabo, eos optio voluptatem '
 		}
 
