@@ -11,6 +11,8 @@ export function galleryActions(element){
 			var active = this.classList.contains('board-wall__preview_active');
 			var linkToMainImg;
 			var mainImage;
+			var imageContainer;
+			var newImage;
 
 			//if active stop function
 			if(active) return false;
@@ -20,15 +22,21 @@ export function galleryActions(element){
 			this.classList.add('board-wall__preview_active');
 
 			//add new image as main
+			imageContainer = document.querySelector('.board-wall__main-image');
 			mainImage = element.querySelector('.js-board-wall_main-image');
 			mainImage.classList.add('board-wall__opacity-state');
 
-			//set interval for easy animation
 			linkToMainImg = this.getAttribute('href');
+			
+			newImage = document.createElement('img');
+			newImage.setAttribute('src', linkToMainImg);
+			newImage.classList.add('js-board-wall_main-image', 'board-wall__opacity-state');
+
+			//set interval for easy animation
 			setTimeout(function(){
-				mainImage.setAttribute('src', linkToMainImg);
-				mainImage.classList.remove('board-wall__opacity-state');
-			},300);
+				imageContainer.replaceChild(newImage, mainImage);
+				newImage.classList.remove('board-wall__opacity-state');
+			},360);
 
 		});
 

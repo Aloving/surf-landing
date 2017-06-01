@@ -9,7 +9,8 @@ let lifeCycle = {
 	itemFromScratch: 'itemFromScratch',
 	templateItem: 'templateItem',
 	createDOMelement: 'createDOMelement',
-	initWallInteractive: 'initWallInteractive'
+	initWallInteractive: 'initWallInteractive',
+	loadImages: 'loadImages'
 };
 
 let _getFromCacheStorage = cacheStorage({
@@ -38,7 +39,11 @@ mediator.subscribe(lifeCycle.createDOMelement, facade.createDOMelement(
 
 
 mediator.subscribe(lifeCycle.initWallInteractive, facade.initWallInteractive(
-	mediator.publish.bind(undefined, lifeCycle.publishDOMelement)
+	mediator.publish.bind(undefined, lifeCycle.loadImages)
+));
+
+mediator.subscribe(lifeCycle.loadImages, facade.loadImages(
+	mediator.publish.bind(undefined, lifeCycle.publishDOMElement)
 ));
 
 
