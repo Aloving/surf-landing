@@ -1,2 +1,2 @@
 # Surf landing
-[link](http://http://34.211.21.206/)
+[link](http://34.211.21.206/)
